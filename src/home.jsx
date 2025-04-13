@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
 import { Star, ArrowRight, ShoppingBag, Globe, Code } from 'lucide-react';
 import { Button } from '@mui/material';
+import {motion} from "framer-motion";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
 import {
     FaShopify,
     FaBullhorn,
@@ -136,171 +139,260 @@ export default function Home() {
   };
   return (
     <div>
-       <section className="relative bg-black text-white">
-      <div className="max-w-screen-xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-6 py-16">
-        {/* Left Content */}
-        <div className="text-center md:text-center md:w-1/2 space-y-6">
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-            Empowering <span className="text-orange-400">Businesses</span> With
-            <br /> Seamless <span className="text-orange-400">Websites</span>, Intuitive <span className="text-orange-400">Apps</span>
-            <br /> & Data-Driven <span className="text-orange-400">Marketing</span>
-          </h1>
+       <section className="relative bg-black text-white overflow-hidden">
+  {/* Background Image */}
+  <div
+    className="absolute inset-0 bg-cover bg-center opacity-20"
+    style={{ backgroundImage: "url('/images/hero.jpg')" }}
+  ></div>
 
-          <Button
-            variant="contained"
-            sx={{
-              background: "linear-gradient(90deg, #6C63FF, #8A2BE2)",
-              borderRadius: "999px",
-              padding: "0.75rem 2rem",
-              fontWeight: "bold",
-              textTransform: "none",
-            }}
-          >
-            Request a Quote
-          </Button>
+  {/* Content Overlay */}
+  <div className="relative z-10 max-w-screen-xl mx-auto flex items-center justify-center px-6 py-32">
+    <div className="text-center max-w-3xl space-y-6">
+      <h1 className="text-4xl md:text-4xl font-bold leading-tight">
+        Empowering <span className="text-orange-400">Businesses</span> With
+        <br /> Seamless <span className="text-orange-400">Websites</span>, Intuitive <span className="text-orange-400">Apps</span>
+        <br /> & Data-Driven <span className="text-orange-400">Marketing</span>
+      </h1>
 
-          <div className="flex items-center justify-center md:justify-start gap-2 text-gray-300">
-            <Star className="text-yellow-400" fill="yellow" />
-            <span className="font-semibold text-white">4.9</span>
-            <span className="text-sm">out of 5 (112+ Reviews)</span>
-          </div>
+      <Button
+        variant="contained"
+        sx={{
+          background: "linear-gradient(90deg, #6C63FF, #8A2BE2)",
+          borderRadius: "999px",
+          padding: "0.75rem 2rem",
+          fontWeight: "bold",
+          textTransform: "none",
+        }}
+      >
+        Request a Quote
+      </Button>
 
-          <p className="text-gray-400 text-sm">
-            Trusted by over 200+ innovative eCommerce brands, we're your partner in success.
-          </p>
-        </div>
-
-        {/* Right Image (Background Hero Image Style) */}
-        <div className="md:w-1/2 mb-10 md:mb-0">
-          <img
-            src="/images/hero-banner.jpg" // Replace with your image path
-            alt="Hero Banner"
-            className="rounded-xl w-full h-auto shadow-xl"
-          />
-        </div>
+      <div className="flex items-center justify-center gap-2 text-gray-300">
+        <Star className="text-yellow-400" fill="yellow" />
+        <span className="font-semibold text-white">4.9</span>
+        <span className="text-sm">out of 5 (112+ Reviews)</span>
       </div>
 
-      {/* Logos row */}
-      <div className="bg-gray-900 py-6 px-4">
-        <div className="max-w-screen-xl mx-auto flex flex-wrap justify-center gap-6 items-center">
-          {[
-            "hubspot.png",
-            "meta.png",
-            "klaviyo.png",
-            "shopify.png",
-            "dme.png",
-            "googleads.png",
-            "clutch.png",
-            "whatsapp.png",
-          ].map((logo, index) => (
-            <img
-              key={index}
-              src={`/logos/${logo}`} // Place your logos in public/logos
-              alt="partner-logo"
-              className="h-10 object-contain"
-            />
-          ))}
-        </div>
-      </div>
-    </section>
+      <p
+  className="text-gray-300 bg-gray-900 text-sm p-1 rounded-md shadow-md"
+>
+  Trusted by over 200+ innovative eCommerce brands, we're your partner in success.
+</p>
 
-    <section className="bg-black text-white py-16 px-6 md:px-16">
-      <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-        Our Services For Your Digital Transformation
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className={`rounded-2xl p-6 bg-gradient-to-br ${service.color} to-transparent hover:scale-105 transition-transform duration-300 border border-white/10`}
-          >
-            <div className="mb-4">{service.icon}</div>
-            <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-            <a
-              href="#"
-              className="text-sm text-white underline hover:text-green-300"
-            >
-              Learn more →
-            </a>
-          </div>
-        ))}
-      </div>
-    </section>
+    </div>
+  </div>
+
+  {/* Logos Row */}
+  <div className="relative overflow-hidden py-6 px-4 z-10 ml-40 mr-40 w-300">
+  <div className="animate-scroll flex items-center gap-12 whitespace-nowrap">
+    {[
+      "hubspot.png",
+      "meta.png",
+      "klaviyo.png",
+      "shopify.png",
+      "dme.png",
+      "googleads.png",
+      "clutch.png",
+      "whatsapp.png",
+      // Duplicate to make it loop seamlessly
+      "hubspot.png",
+      "meta.png",
+      "klaviyo.png",
+      "shopify.png",
+      "dme.png",
+      "googleads.png",
+      "clutch.png",
+      "whatsapp.png",
+    ].map((logo, index) => (
+      <img
+        key={index}
+        src={`/images/${logo}`}
+        alt="partner-logo"
+        className="h-10 object-contain"
+      />
+    ))}
+  </div>
+
+  {/* Custom animation style */}
+  <style jsx>{`
+    @keyframes scroll {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+    .animate-scroll {
+      animation: scroll 30s linear infinite;
+    }
+  `}</style>
+</div>
+
+</section>
+
+
+<section className="bg-black text-white py-16 px-6 md:px-16">
+  {/* Animated Heading */}
+  <motion.h2
+    className="text-3xl md:text-4xl font-bold mb-12 text-center"
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, ease: "easeOut" }}
+    viewport={{ once: true }}
+  >
+    Our Services For Your Digital Transformation
+  </motion.h2>
+
+  {/* Animated Grid */}
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    {services.map((service, index) => (
+      <motion.div
+        key={index}
+        className={`rounded-2xl p-6 bg-gradient-to-br ${service.color} to-transparent hover:scale-105 transition-transform duration-300 border border-white/10`}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.5,
+          ease: "easeOut",
+          delay: index * 0.1, // Staggered effect
+        }}
+        viewport={{ once: true }}
+      >
+        <div className="mb-4">{service.icon}</div>
+        <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+        <a
+          href="#"
+          className="text-sm text-white underline hover:text-green-300"
+        >
+          Learn more →
+        </a>
+      </motion.div>
+    ))}
+  </div>
+</section>
 
     <section className="bg-black text-white px-6 py-16 md:px-16 flex flex-col md:flex-row gap-10 items-center">
-      {/* Left image */}
-      <div className="flex-1">
-        <img
-          src="https://i.imgur.com/4kbPTdb.png" // Your screenshot or actual asset here
-          alt="Shopify Partner Badge"
-          className="rounded-xl shadow-lg"
-        />
-      </div>
+  {/* Left image */}
+  <motion.div
+    className="flex-1"
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, ease: "easeOut" }}
+    viewport={{ once: true }}
+  >
+    <img
+      src="https://i.imgur.com/4kbPTdb.png"
+      alt="Shopify Partner Badge"
+      className="rounded-xl shadow-lg"
+    />
+  </motion.div>
 
-      {/* Right content */}
-      <div className="flex-1 space-y-6">
-        <h2 className="text-3xl md:text-4xl font-bold">
-          We Excel in Shopify Development Services
-        </h2>
-        <p className="text-gray-300">
-          In Shopify development services, we don't just meet expectations; we exceed them. With a proven track record of success, we outperform in every aspect of Shopify development.
-        </p>
+  {/* Right content */}
+  <motion.div
+    className="flex-1 space-y-6"
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+    viewport={{ once: true }}
+  >
+    <h2 className="text-3xl md:text-4xl font-bold">
+      We Excel in Shopify Development Services
+    </h2>
+    <p className="text-gray-300">
+      In Shopify development services, we don't just meet expectations; we exceed them. With a proven track record of success, we outperform in every aspect of Shopify development.
+    </p>
 
-        {/* Features */}
-        <div className="grid grid-cols-2 gap-4">
-          {features.map((item, index) => (
-            <div key={index} className="flex items-center gap-3">
-              <div className="text-white text-xl">{item.icon}</div>
-              <span className="text-sm text-white">{item.label}</span>
-            </div>
-          ))}
+    {/* Features */}
+    <div className="grid grid-cols-2 gap-4">
+      {features.map((item, index) => (
+        <div key={index} className="flex items-center gap-3">
+          <div className="text-white text-xl">{item.icon}</div>
+          <span className="text-sm text-white">{item.label}</span>
         </div>
+      ))}
+    </div>
 
-        {/* ERP Integration logos */}
-        <div>
-          <h3 className="text-xl font-semibold mt-6 mb-4">
-            Our ERP Integration Services
-          </h3>
-          <div className="flex flex-wrap gap-4 items-center">
-            {erpLogos.map((erp, index) => (
-              <img
-                key={index}
-                src={erp.src}
-                alt={erp.name}
-                className="h-10 max-w-[120px] object-contain"
-              />
-            ))}
-          </div>
-        </div>
-
-        <button className="mt-6 bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-full text-sm transition">
-          Read More
-        </button>
-      </div>
-    </section>
-
-    <section className="bg-gradient-to-b from-[#0f0f1f] to-black text-white py-16 px-6 md:px-20 text-center">
-      <h2 className="text-3xl md:text-4xl font-bold mb-2">Working Process</h2>
-      <p className="text-gray-300 mb-12 text-sm">How we work for our customer</p>
-
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 mb-12">
-        {steps.map((step, index) => (
-          <div
+    {/* ERP Integration logos */}
+    <div>
+      <h3 className="text-xl font-semibold mt-6 mb-4">
+        Our ERP Integration Services
+      </h3>
+      <div className="flex flex-wrap gap-4 items-center">
+        {erpLogos.map((erp, index) => (
+          <img
             key={index}
-            className="flex flex-col items-center gap-4 transition-transform hover:scale-105"
-          >
-            <div className="w-20 h-20 rounded-full bg-[#1a1a2e] flex items-center justify-center text-2xl text-white shadow-lg border border-violet-500 ring-2 ring-violet-600 ring-opacity-40 hover:ring-4 hover:ring-opacity-70">
-              {step.icon}
-            </div>
-            <span className="text-sm">{step.label}</span>
-          </div>
+            src={erp.src}
+            alt={erp.name}
+            className="h-10 max-w-[120px] object-contain"
+          />
         ))}
       </div>
+    </div>
 
-      <button className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white px-8 py-3 rounded-full font-medium transition-all">
-        Request a Quote
-      </button>
-    </section>
+    <button className="mt-6 bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-full text-sm transition">
+      Read More
+    </button>
+  </motion.div>
+</section>
+
+<section className="bg-gradient-to-b from-[#0f0f1f] to-black text-white py-16 px-6 md:px-20 text-center">
+  {/* Heading animation */}
+  <motion.h2
+    className="text-3xl md:text-4xl font-bold mb-2"
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, ease: "easeOut" }}
+    viewport={{ once: true }}
+  >
+    Working Process
+  </motion.h2>
+
+  <motion.p
+    className="text-gray-300 mb-12 text-sm"
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+    viewport={{ once: true }}
+  >
+    How we work for our customer
+  </motion.p>
+
+  {/* Steps animation */}
+  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 mb-12">
+    {steps.map((step, index) => (
+      <motion.div
+        key={index}
+        className="flex flex-col items-center gap-4 transition-transform hover:scale-105"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.5,
+          ease: "easeOut",
+          delay: index * 0.1,
+        }}
+        viewport={{ once: true }}
+      >
+        <div className="w-40 h-40 rounded-full bg-[#1a1a2e] flex items-center justify-center text-4xl text-white shadow-lg border border-violet-500 ring-2 ring-violet-600 ring-opacity-40 hover:ring-4 hover:ring-opacity-70">
+          {step.icon}
+        </div>
+        <span className="text-sm">{step.label}</span>
+      </motion.div>
+    ))}
+  </div>
+
+  {/* CTA button */}
+  <motion.button
+    className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white px-8 py-3 rounded-full font-medium transition-all"
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
+    viewport={{ once: true }}
+  >
+    Request a Quote
+  </motion.button>
+</section>
 
     <section className="bg-black text-white py-16 px-6 md:px-20">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-2">
@@ -317,14 +409,14 @@ export default function Home() {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`w-full py-4 px-6 rounded-md border text-left font-medium transition-all
+              className={`w-full py-4 px-6 rounded-md border text-center font-medium transition-all
                 ${
                   activeCategory === category
                     ? "bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-md"
                     : "bg-[#1a1a1a] text-gray-300 border-gray-700 hover:bg-[#2a2a2a]"
                 }`}
             >
-              {category}
+              <div className='py-3 font-bold' style={{fontSize: "20px"}}>{category}</div>
             </button>
           ))}
         </div>
@@ -348,26 +440,47 @@ export default function Home() {
     </section>
 
     <section className="bg-gradient-to-r from-[#0a0a0f] to-[#0f0f1f] text-white py-16 px-6 md:px-20">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold mb-2">
-          Our Achievements & Milestones
-        </h2>
-        <p className="text-gray-300 text-sm">
-          Explore our company’s remarkable achievements, milestones, and records that
-          showcase our success and expertise
-        </p>
-      </div>
+  {/* Heading */}
+  <motion.div
+    className="text-center mb-12"
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, ease: "easeOut" }}
+    viewport={{ once: true }}
+  >
+    <h2 className="text-3xl md:text-4xl font-bold mb-2">
+      Our Achievements & Milestones
+    </h2>
+    <p className="text-gray-300 text-sm">
+      Explore our company’s remarkable achievements, milestones, and records that
+      showcase our success and expertise
+    </p>
+  </motion.div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-center">
-        {stats.map(({ icon: Icon, label, value }, index) => (
-          <div key={index} className="flex flex-col items-center">
-            <Icon className="text-blue-400 text-3xl mb-2" />
-            <h3 className="text-xl font-bold">{value}</h3>
-            <p className="text-sm text-gray-300">{label}</p>
-          </div>
-        ))}
-      </div>
-    </section>
+  {/* Stats Grid */}
+  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-center">
+    {stats.map(({ icon: Icon, label, value }, index) => {
+      const { ref, inView } = useInView({ triggerOnce: true });
+
+      return (
+        <motion.div
+          key={index}
+          ref={ref}
+          className="flex flex-col items-center"
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: index * 0.1 }}
+        >
+          <Icon className="text-blue-400 text-4xl mb-2" />
+          <h3 className="text-xl font-bold">
+            {inView && <CountUp end={value} duration={2} />}
+          </h3>
+          <p className="text-sm text-gray-300">{label}</p>
+        </motion.div>
+      );
+    })}
+  </div>
+</section>
 
     <section className="bg-[#0b0c10] text-white px-6 md:px-20 py-16 flex flex-col-reverse md:flex-row items-center justify-between gap-10">
       {/* Text Content */}
@@ -412,10 +525,6 @@ export default function Home() {
         />
       </div>
     </section>
-
-    
-
-     
 
       {/* Project Start Section */}
       <section className="py-20 bg-purple-600">
