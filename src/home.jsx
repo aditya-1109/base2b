@@ -56,6 +56,7 @@ function ServiceCard({ icon, title, color }) {
 
 export default function Home() {
     const [activeCategory, setActiveCategory] = useState("FRONTEND");
+    const { ref, inView } = useInView({ triggerOnce: true });
 
   const TechIcon = ({ Icon }) => (
     <div className="bg-[#0f0f1f] border border-blue-700 rounded-md p-6 flex justify-center items-center hover:scale-105 transition-all shadow-lg text-4xl text-white">
@@ -71,11 +72,11 @@ export default function Home() {
   });
 
   const stats = [
-    { icon: FaAward, label: "Years of IT Industry", value: "5+" },
-    { icon: FaProjectDiagram, label: "Successfull Project", value: "250+" },
-    { icon: FaStar, label: "Ratings on Clutch", value: "4.9+" },
-    { icon: FaUserFriends, label: "Happy Client", value: "100+" },
-    { icon: FaLaptopCode, label: "Website Designed", value: "100+" },
+    { icon: FaAward, label: "Years of IT Industry", value: 5 },
+    { icon: FaProjectDiagram, label: "Successfull Project", value: 250 },
+    { icon: FaStar, label: "Ratings on Clutch", value: 4.9 },
+    { icon: FaUserFriends, label: "Happy Client", value: 100 },
+    { icon: FaLaptopCode, label: "Website Designed", value: 100 },
   ];
 
   const techData = {
@@ -95,6 +96,12 @@ export default function Home() {
     { label: "Launch", icon: <FaRocket /> },
   ];
 
+  const sections = [
+    { bg: "bg-purple-600" },
+    { bg: "bg-red-600" },
+    { bg: "bg-green-600" },
+  ];
+
   const features = [
     { icon: <FaCogs />, label: "ERP Software" },
     { icon: <FaPuzzlePiece />, label: "Custom apps & Integrations" },
@@ -112,6 +119,7 @@ export default function Home() {
     { name: "Orderwise", src: "https://forterro.com/themes/custom/forterro/images/forterro-logo.svg" },
     { name: "Custom Recharge", src: "https://cdn-icons-png.flaticon.com/512/854/854878.png" }, // placeholder
   ];
+
 
   const services = [
     { icon: <FaShopify className="text-4xl text-green-400" />, title: "Shopify Development", color: "from-green-500/30" },
@@ -460,7 +468,7 @@ export default function Home() {
   {/* Stats Grid */}
   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-center">
     {stats.map(({ icon: Icon, label, value }, index) => {
-      const { ref, inView } = useInView({ triggerOnce: true });
+      
 
       return (
         <motion.div
@@ -473,7 +481,7 @@ export default function Home() {
         >
           <Icon className="text-blue-400 text-4xl mb-2" />
           <h3 className="text-xl font-bold">
-            {inView && <CountUp end={value} duration={2} />}
+            {inView && <CountUp end={value} duration={2} />}+
           </h3>
           <p className="text-sm text-gray-300">{label}</p>
         </motion.div>
@@ -527,16 +535,29 @@ export default function Home() {
     </section>
 
       {/* Project Start Section */}
-      <section className="py-20 bg-purple-600">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-xl mb-4">Do You Have a Project to Start?</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Together We'll<br />Complete It!</h2>
-          <p className="mb-8">Let's connect</p>
-          <button className="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold">
-            Start Your Project
-          </button>
-        </div>
-      </section>
+      <section className="h-screen overflow-y-scroll bg-black snap-y snap-mandatory">
+  {sections.map((section, index) => (
+    <motion.div
+      key={index}
+      className={`h-screen flex items-center justify-center ${section.bg} snap-start`}
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true, amount: 0.8 }}
+    >
+      <div className="text-center text-white px-4">
+        <p className="text-xl mb-4">Do You Have a Project to Start?</p>
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          Together We'll<br />Complete It!
+        </h2>
+        <p className="mb-8">Let's connect</p>
+        <button className="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold">
+          Start Your Project
+        </button>
+      </div>
+    </motion.div>
+  ))}
+</section>
 
       {/* Contact Form Section */}
       <section className="py-20 bg-[#0d0d0d]">
