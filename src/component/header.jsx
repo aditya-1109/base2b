@@ -20,17 +20,17 @@ export default function Header() {
         <div className="hidden md:flex items-center gap-8 relative">
 
           {/* Home */}
-          <div onClick={() => navigate('/')} className="hover:text-white cursor-pointer">
+          <div onClick={() => navigate('/')} className="cursor-pointer text-white hover:underline hover:underline-offset-4 hover:decoration-blue-500 hover:font-bold flex items-center gap-1">
             Home
           </div>
 
           {/* About Us */}
           <div className="relative group cursor-pointer">
-  <div className="flex items-center gap-1 hover:text-white">
+  <div onClick={()=>navigate("/about")} className="cursor-pointer text-white hover:underline hover:underline-offset-4 hover:decoration-blue-500 hover:font-bold flex items-center gap-1">
     About Us <ChevronDown className="w-4 h-4" />
   </div>
 
-  <div className="absolute top-full left-0 mt-2 z-50 hidden group-hover:flex bg-black px-4 py-4 rounded-xl shadow-lg gap-4">
+  <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 z-50 hidden group-hover:flex bg-black px-4 py-4 rounded-xl shadow-lg gap-4">
     <div
       onClick={() => navigate('/about')}
       className="w-64 rounded-xl bg-blue-200 text-black hover:bg-blue-300 cursor-pointer px-5 py-4 transition-all"
@@ -73,11 +73,11 @@ export default function Header() {
 
           {/* Services */}
           <div className="relative group cursor-pointer">
-  <div className="flex items-center gap-1 hover:text-white">
+  <div onClick={()=>navigate("/service")} className="cursor-pointer text-white hover:underline hover:underline-offset-4 hover:decoration-blue-500 hover:font-bold flex items-center gap-1">
     Services <ChevronDown className="w-4 h-4" />
   </div>
 
-  <div className="absolute top-full left-0 mt-2 z-50 hidden group-hover:flex bg-black px-4 py-4 rounded-xl shadow-lg gap-4">
+  <div className="absolute top-full left-1/2 mt-2 z-50 hidden group-hover:flex bg-black px-4 py-4 rounded-xl shadow-lg gap-4">
     <div className="w-64 rounded-xl bg-blue-200 text-black hover:bg-blue-300 cursor-pointer px-5 py-4 transition-all">
       <div className="flex justify-between items-start">
         <p className="font-semibold">Digital Marketing</p>
@@ -110,22 +110,22 @@ export default function Header() {
 
 
           {/* Portfolio */}
-          <div onClick={() => navigate('/portfolio')} className="hover:text-white cursor-pointer">
+          <div onClick={() => navigate('/portfolio')} className="cursor-pointer text-white hover:underline hover:underline-offset-4 hover:decoration-blue-500 hover:font-bold">
             Portfolio
           </div>
 
           {/* Case Study */}
-          <div onClick={() => navigate('/case')} className="hover:text-white cursor-pointer">
+          <div onClick={() => navigate('/case')} className="cursor-pointer text-white hover:underline hover:underline-offset-4 hover:decoration-blue-500 hover:font-bold">
             Case Study
           </div>
 
           {/* ERP Integration */}
           <div className="relative group cursor-pointer">
-  <div className="flex items-center gap-1 hover:text-white">
-    ERP Integration <ChevronDown className="w-4 h-4" />
-  </div>
+          <div onClick={()=> navigate("/ERP")} className="cursor-pointer text-white hover:underline hover:underline-offset-4 hover:decoration-blue-500 hover:font-bold flex items-center gap-1">
+  ERP Integration <ChevronDown className="w-4 h-4" />
+</div>
 
-  <div className="absolute top-full left-0 mt-2 z-50 hidden group-hover:flex bg-black px-4 py-4 rounded-xl shadow-lg gap-4">
+  <div className="absolute top-full left-1/2 mt-2 z-50 hidden group-hover:flex bg-black px-4 py-4 rounded-xl shadow-lg gap-4">
     <div className="w-64 rounded-xl bg-blue-200 text-black hover:bg-blue-300 cursor-pointer px-5 py-4 transition-all">
       <div className="flex justify-between items-start">
         <p className="font-semibold">ERP Overview</p>
