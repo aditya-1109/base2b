@@ -1,9 +1,13 @@
-import React from 'react';
-import { ChevronDown, ArrowRight, Phone } from 'lucide-react';
+import React, { useState } from 'react';
+import { ChevronDown, ArrowRight, Phone, Menu,  X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 export default function Header() {
   const navigate = useNavigate();
+ 
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   const dropdownCardStyle =
     'w-72 rounded-xl shadow-lg px-5 py-4 text-left transition-all';
@@ -13,10 +17,36 @@ export default function Header() {
   return (
     <nav className="fixed top-0 w-full z-50 bg-[#0a0a0a]/90 backdrop-blur-sm text-white">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+<div className="md:hidden">
+          <button onClick={toggleMobileMenu}>
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center gap-8 relative">
+          {/* your existing nav items here (Home, About Us, etc.) */}
+          {/* ... copy the whole md:flex section from your original code ... */}
+        </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="absolute top-full left-0 w-full bg-[#0a0a0a] flex flex-col gap-4 p-4 md:hidden z-50">
+            <div onClick={() => { navigate('/'); toggleMobileMenu(); }} className="cursor-pointer">Home</div>
+            <div onClick={() => { navigate('/about'); toggleMobileMenu(); }} className="cursor-pointer">About Us</div>
+            <div onClick={() => { navigate('/service'); toggleMobileMenu(); }} className="cursor-pointer">Services</div>
+            <div onClick={() => { navigate('/portfolio'); toggleMobileMenu(); }} className="cursor-pointer">Portfolio</div>
+            <div onClick={() => { navigate('/case'); toggleMobileMenu(); }} className="cursor-pointer">Case Study</div>
+            <div onClick={() => { navigate('/ERP'); toggleMobileMenu(); }} className="cursor-pointer">ERP Integration</div>
+            <button className="bg-blue-600 text-white px-4 py-2 rounded-full mt-2" onClick={() => toggleMobileMenu()}>Contact</button>
+          </div>
+        )}
         {/* Logo */}
         <div className="text-2xl font-bold">BASE2BRAND</div>
 
         {/* Menu */}
+      
+        
         <div className="hidden md:flex items-center gap-8 relative">
 
           {/* Home */}
