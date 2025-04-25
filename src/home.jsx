@@ -175,9 +175,8 @@ export default function Home() {
   <div className="relative z-10 max-w-screen-xl mx-auto flex items-center justify-center px-6 py-32">
     <div className="text-center max-w-3xl space-y-6">
       <h1 className="text-4xl md:text-4xl font-bold leading-tight">
-        Empowering <span className="text-orange-400">Businesses</span> With
-        <br /> Seamless <span className="text-orange-400">Websites</span>, Intuitive <span className="text-orange-400">Apps</span>
-        <br /> & Data-Driven <span className="text-orange-400">Marketing</span>
+      
+      Helping Businesses  <span className="text-orange-400">Thrive with Seamless </span>,Websites,<span className="text-orange-400">User-Friendly Apps, </span> and Insightful <span className="text-orange-400">Marketing Strategies</span>
       </h1>
 
       <Button
@@ -202,7 +201,7 @@ export default function Home() {
       <p
   className="text-gray-300 bg-gray-900 text-sm p-1 rounded-md shadow-md"
 >
-  Trusted by over 200+ innovative eCommerce brands, we're your partner in success.
+Partnering with 200+ forward-thinking eCommerce brands to drive success.
 </p>
 
     </div>
@@ -212,29 +211,21 @@ export default function Home() {
   <div className="relative overflow-hidden py-6 px-4 z-10 ml-40 mr-40 w-300">
   <div className="animate-scroll flex items-center gap-12 whitespace-nowrap">
     {[
-      "hubspot.png",
-      "meta.png",
-      "klaviyo.png",
-      "shopify.png",
-      "dme.png",
-      "googleads.png",
-      "clutch.png",
-      "whatsapp.png",
-      // Duplicate to make it loop seamlessly
-      "hubspot.png",
-      "meta.png",
-      "klaviyo.png",
-      "shopify.png",
-      "dme.png",
-      "googleads.png",
-      "clutch.png",
-      "whatsapp.png",
+      "r.png",
+      "a.png",
+      "aesi.png",
+      "bailey.png",
+      "battlezone.png",
+      "larana.png",
+      "royal.png",
+      "smh.png",
+      "wom.png",
     ].map((logo, index) => (
       <img
         key={index}
-        src={`/images/${logo}`}
+        src={`./images/${logo}`}
         alt="partner-logo"
-        className="h-10 object-contain"
+        className="h-20 object-contain"
       />
     ))}
   </div>
