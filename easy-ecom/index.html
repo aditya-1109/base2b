@@ -1,0 +1,2038 @@
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="./styles/d3df112486f97f47.css" crossorigin="" data-precedence="next">
+  <link rel="stylesheet" href="./styles/9ca5f1e4ca029360.css" crossorigin="" data-precedence="next">
+  <link rel="stylesheet" href="./styles/a40edaa4df10f24c.css" crossorigin="" data-precedence="next">
+  <link rel="stylesheet" href="./styles/69f81e06845cd7ae.css" crossorigin="" data-precedence="next">
+  <link rel="stylesheet" href="./styles/e1773de851f20636.css" crossorigin="" data-precedence="next">
+  <link rel="stylesheet" href="./styles/04f3a9ef4f24f829.css" crossorigin="" data-precedence="next">
+  <link rel="stylesheet" href="./styles/4cc9cebfd6ad33b6.css" crossorigin="" data-precedence="next">
+  <link rel="stylesheet" href="./styles/965f3157077b1de9.css" crossorigin="" data-precedence="next">
+  <script async src="./scripts/clarity.js"></script>
+  <script src="/signals/config/964988344362368" async></script>
+  <script src="/signals/config/1057584673056804" async></script>
+  <script type="text/javascript" async src="./scripts/fbevents.js"></script>
+  <script type="text/javascript" async src="./scripts/analytics.js"></script>
+  <script async src="./scripts/fbevents.js"></script>
+  <script async src="./scripts/gtm.js"></script>
+  <script async src="/tag/qgutziiy6g"></script>
+  <script src="./scripts/fd9d1056-b7d88d4607ac5f9f.js" async crossorigin=""></script>
+  <script src="./scripts/2472-7890fc9264577485.js" async crossorigin=""></script>
+  <script src="./scripts/main-app-4ab47960308139b7.js" async crossorigin=""></script>
+  <script src="./scripts/5364-f27710977812a50a.js" async></script>
+  <script src="./scripts/layout-b08e73d22492a89e.js" async></script>
+  <script src="./scripts/8627a13e-9a385ebefd985090.js" async></script>
+  <script src="./scripts/7041-898b442258f79fd8.js" async></script>
+  <script src="./scripts/1396-d0db9265e750d8d9.js" async></script>
+  <script src="./scripts/7856-ea204568f52f55bb.js" async></script>
+  <script src="./scripts/6471-220d12900de2f19f.js" async></script>
+  <script src="./scripts/7039-ebd1d475ee70a684.js" async></script>
+  <script src="./scripts/6930-caa30c81857e031d.js" async></script>
+  <script src="./scripts/3238-43930ede94cad6aa.js" async></script>
+  <script src="./scripts/9480-9175637a00eebb6c.js" async></script>
+  <script src="./scripts/6599-17cf0cf39a9c0044.js" async></script>
+  <script src="./scripts/page-917eb09d95a88c8c.js" async></script>
+  <link href="/css2" rel="stylesheet">
+  <link href="/css2" rel="stylesheet">
+  <link href="/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/font-awesome.min.css">
+  <script src="./scripts/polyfills-c67a75d1b6f99dc8.js" crossorigin="" nomodule></script>
+  <style type="text/css">
+    .lf-progress {
+      -webkit-appearance: none;
+      -moz-apperance: none;
+      width: 100%;
+      /* margin: 0 10px; */
+      height: 4px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .lf-progress:focus {
+      outline: none;
+      border: none;
+    }
+
+    .lf-progress::-moz-range-track {
+      cursor: pointer;
+      background: none;
+      border: none;
+      outline: none;
+    }
+
+    .lf-progress::-webkit-slider-thumb {
+      -webkit-appearance: none !important;
+      height: 13px;
+      width: 13px;
+      border: 0;
+      border-radius: 50%;
+      background: #0fccce;
+      cursor: pointer;
+    }
+
+    .lf-progress::-moz-range-thumb {
+      -moz-appearance: none !important;
+      height: 13px;
+      width: 13px;
+      border: 0;
+      border-radius: 50%;
+      background: #0fccce;
+      cursor: pointer;
+    }
+
+    .lf-progress::-ms-track {
+      width: 100%;
+      height: 3px;
+      cursor: pointer;
+      background: transparent;
+      border-color: transparent;
+      color: transparent;
+    }
+
+    .lf-progress::-ms-fill-lower {
+      background: #ccc;
+      border-radius: 3px;
+    }
+
+    .lf-progress::-ms-fill-upper {
+      background: #ccc;
+      border-radius: 3px;
+    }
+
+    .lf-progress::-ms-thumb {
+      border: 0;
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      background: #0fccce;
+      cursor: pointer;
+    }
+
+    .lf-progress:focus::-ms-fill-lower {
+      background: #ccc;
+    }
+
+    .lf-progress:focus::-ms-fill-upper {
+      background: #ccc;
+    }
+
+    .lf-player-container :focus {
+      outline: 0;
+    }
+
+    .lf-popover {
+      position: relative;
+    }
+
+    .lf-popover-content {
+      display: inline-block;
+      position: absolute;
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0, -10px);
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+      transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+    }
+
+    .lf-popover-content.hidden {
+      opacity: 0;
+      visibility: hidden;
+      transform: translate(0, 0px);
+    }
+
+    .lf-player-btn-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .lf-player-btn {
+      cursor: pointer;
+      fill: #999;
+      width: 14px;
+    }
+
+    .lf-player-btn.active {
+      fill: #555;
+    }
+
+    .lf-popover {
+      position: relative;
+    }
+
+    .lf-popover-content {
+      display: inline-block;
+      position: absolute;
+      background-color: #ffffff;
+      opacity: 1;
+
+      transform: translate(0, -10px);
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+      transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+      padding: 10px;
+    }
+
+    .lf-popover-content.hidden {
+      opacity: 0;
+      visibility: hidden;
+      transform: translate(0, 0px);
+    }
+
+    .lf-arrow {
+      position: absolute;
+      z-index: -1;
+      content: '';
+      bottom: -9px;
+      border-style: solid;
+      border-width: 10px 10px 0px 10px;
+    }
+
+    .lf-left-align,
+    .lf-left-align .lfarrow {
+      left: 0;
+      right: unset;
+    }
+
+    .lf-right-align,
+    .lf-right-align .lf-arrow {
+      right: 0;
+      left: unset;
+    }
+
+    .lf-text-input {
+      border: 1px #ccc solid;
+      border-radius: 5px;
+      padding: 3px;
+      width: 60px;
+      margin: 0;
+    }
+
+    .lf-color-picker {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 90px;
+    }
+
+    .lf-color-selectors {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .lf-color-component {
+      display: flex;
+      flex-direction: row;
+      font-size: 12px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lf-color-component strong {
+      width: 40px;
+    }
+
+    .lf-color-component input[type='range'] {
+      margin: 0 0 0 10px;
+    }
+
+    .lf-color-component input[type='number'] {
+      width: 50px;
+      margin: 0 0 0 10px;
+    }
+
+    .lf-color-preview {
+      font-size: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 5px;
+    }
+
+    .lf-preview {
+      height: 60px;
+      width: 60px;
+    }
+
+    .lf-popover-snapshot {
+      width: 150px;
+    }
+
+    .lf-popover-snapshot h5 {
+      margin: 5px 0 10px 0;
+      font-size: 0.75rem;
+    }
+
+    .lf-popover-snapshot a {
+      display: block;
+      text-decoration: none;
+    }
+
+    .lf-popover-snapshot a:before {
+      content: '⥼';
+      margin-right: 5px;
+    }
+
+    .lf-popover-snapshot .lf-note {
+      display: block;
+      margin-top: 10px;
+      color: #999;
+    }
+
+    .lf-player-controls>div {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+
+    .lf-player-controls>div:first-child {
+      margin-left: 0px;
+    }
+
+    .lf-player-controls>div:last-child {
+      margin-right: 0px;
+    }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <meta name="google-site-verification" content="bUGDRRzEBb5VQ8pNq6l7Qtp-sQJg15CvaLJ2a2O8ZH8">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16">
+  <meta name="next-size-adjust">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="bUGDRRzEBb5VQ8pNq6l7Qtp-sQJg15CvaLJ2a2O8ZH8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="/css2" rel="stylesheet">
+  <link href="/css2" rel="stylesheet">
+  <link href="/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/font-awesome.min.css">
+  <link rel="preload" href="/_next/static/css/afec49a2c7b72245.css" as="style" crossorigin="">
+  <link rel="preload" href="/_next/static/css/a2aad03c64d57b0e.css" as="style" crossorigin="">
+  <link rel="preload" href="/_next/static/css/03e6004ba3944573.css" as="style" crossorigin="">
+  <link rel="preload" href="/_next/static/css/a757b7c0663a8b69.css" as="style" crossorigin="">
+  <link rel="preload" href="/_next/static/css/7070662e67112902.css" as="style" crossorigin="">
+  <link rel="preload" href="/_next/static/css/916b28277141aeda.css" as="style" crossorigin="">
+  <style type="text/css">
+    .rfm-marquee-container {
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      width: var(--width);
+      transform: var(--transform);
+    }
+
+    .rfm-marquee-container:hover div {
+      animation-play-state: var(--pause-on-hover);
+    }
+
+    .rfm-marquee-container:active div {
+      animation-play-state: var(--pause-on-click);
+    }
+
+    .rfm-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .rfm-overlay::before,
+    .rfm-overlay::after {
+      background: linear-gradient(to right, var(--gradient-color), rgba(255, 255, 255, 0));
+      content: "";
+      height: 100%;
+      position: absolute;
+      width: var(--gradient-width);
+      z-index: 2;
+      pointer-events: none;
+      touch-action: none;
+    }
+
+    .rfm-overlay::after {
+      right: 0;
+      top: 0;
+      transform: rotateZ(180deg);
+    }
+
+    .rfm-overlay::before {
+      left: 0;
+      top: 0;
+    }
+
+    .rfm-marquee {
+      flex: 0 0 auto;
+      min-width: var(--min-width);
+      z-index: 1;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      animation: scroll var(--duration) linear var(--delay) var(--iteration-count);
+      animation-play-state: var(--play);
+      animation-delay: var(--delay);
+      animation-direction: var(--direction);
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0%);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .rfm-initial-child-container {
+      flex: 0 0 auto;
+      display: flex;
+      min-width: auto;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .rfm-child {
+      transform: var(--transform);
+    }
+  </style>
+  <link rel="preload" href="/_next/static/css/453c01be0cb73fbc.css" as="style" crossorigin="">
+  <link rel="preload" href="/_next/static/css/9a3c2f4123fbd97f.css" as="style" crossorigin="">
+  <link rel="preload" href="/_next/static/css/9c0251290139e8dc.css" as="style" crossorigin="">
+  <link rel="preload" href="/_next/static/css/5ab14efcd3c7a304.css" as="style" crossorigin="">
+  <link rel="preload" href="/_next/static/css/b4d1882160e201c6.css" as="style" crossorigin="">
+  <link rel="preload" href="/_next/static/css/a502b8c45dff6979.css" as="style" crossorigin="">
+  <link rel="preload" href="/_next/static/css/229ef10344ddf15e.css" as="style" crossorigin="">
+  <link rel="preload" href="/_next/static/css/c11d85fcad1938cc.css" as="style" crossorigin="">
+  <link rel="preload" href="/_next/static/css/4d618dc428d7c3ef.css" as="style" crossorigin="">
+  <link rel="preload" href="/_next/static/css/1198d6a2137e35d3.css" as="style" crossorigin="">
+  <link rel="preload" href="/_next/static/css/4cb97295484fb1ff.css" as="style" crossorigin="">
+  <link rel="preload" href="/_next/static/css/cb108d21161ced20.css" as="style" crossorigin="">
+  <link rel="preload" href="/_next/static/css/dc4b987df7a8eded.css" as="style" crossorigin="">
+  <link rel="preload" href="/_next/static/css/1b6d5867817f1d57.css" as="style" crossorigin="">
+  <link rel="preload" href="/_next/static/css/4cc9cebfd6ad33b6.css" as="style" crossorigin="">
+  <link rel="preload" href="/_next/static/css/965f3157077b1de9.css" as="style" crossorigin="">
+  <title>Easy Ecom Shopify Integration Solutions | Base2Brand</title>
+  <meta name="description"
+    content="Base2Brand offers expert Easy Ecom Shopify integration services. Seamlessly connect your Shopify store with Easy Ecom API and setup solutions for improved business efficiency.">
+  <link rel="canonical" href="https://base2brand.com/easy-ecom">
+  <meta property="og:image" content="/img/portfolio/b1.png">
+  <meta name="twitter:image" content="/img/portfolio/b1.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:title" content="Easy Ecom Shopify Integration Solutions | Base2Brand">
+  <meta property="og:description"
+    content="Base2Brand offers expert Easy Ecom Shopify integration services. Seamlessly connect your Shopify store with Easy Ecom API and setup solutions for improved business efficiency.">
+</head>
+
+<body data-aos-easing="ease" data-aos-duration="800" data-aos-delay="0" data-new-gr-c-s-check-loaded="14.1235.0"
+  data-gr-ext-installed="">
+  <script src="./scripts/webpack-485b5e2e3b6bed59.js" crossorigin="" async></script>
+  <script>(self.__next_f = self.__next_f || []).push([0]); self.__next_f.push([2, null])</script>
+  <script>self.__next_f.push([1, "1:HL[\"/_next/static/media/a34f9d1faa5f3315-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n2:HL[\"/_next/static/css/d3df112486f97f47.css\",\"style\",{\"crossOrigin\":\"\"}]\n3:HL[\"/_next/static/css/9ca5f1e4ca029360.css\",\"style\",{\"crossOrigin\":\"\"}]\n4:HL[\"/_next/static/css/a40edaa4df10f24c.css\",\"style\",{\"crossOrigin\":\"\"}]\n0:\"$L5\"\n"])</script>
+  <script>self.__next_f.push([1, "6:HL[\"/_next/static/css/69f81e06845cd7ae.css\",\"style\",{\"crossOrigin\":\"\"}]\n7:HL[\"/_next/static/css/e1773de851f20636.css\",\"style\",{\"crossOrigin\":\"\"}]\n8:HL[\"/_next/static/css/04f3a9ef4f24f829.css\",\"style\",{\"crossOrigin\":\"\"}]\n"])</script>
+  <script>self.__next_f.push([1, "9:I[33728,[],\"\"]\nb:I[29928,[],\"\"]\nc:I[35366,[\"5364\",\"static/chunks/5364-f27710977812a50a.js\",\"3185\",\"static/chunks/app/layout-b08e73d22492a89e.js\"],\"\"]\nd:I[61409,[\"5364\",\"static/chunks/5364-f27710977812a50a.js\",\"3185\",\"static/chunks/app/layout-b08e73d22492a89e.js\"],\"AppStateProvider\"]\ne:I[96978,[\"5364\",\"static/chunks/5364-f27710977812a50a.js\",\"3185\",\"static/chunks/app/layout-b08e73d22492a89e.js\"],\"\"]\nf:I[56954,[],\"\"]\n10:I[7264,[],\"\"]\n"])</script>
+  <script>self.__next_f.push([1, "12:I[85572,[\"8943\",\"static/chunks/8627a13e-9a385ebefd985090.js\",\"5364\",\"static/chunks/5364-f27710977812a50a.js\",\"7041\",\"static/chunks/7041-898b442258f79fd8.js\",\"1396\",\"static/chunks/1396-d0db9265e750d8d9.js\",\"7856\",\"static/chunks/7856-ea204568f52f55bb.js\",\"6471\",\"static/chunks/6471-220d12900de2f19f.js\",\"7039\",\"static/chunks/7039-ebd1d475ee70a684.js\",\"6930\",\"static/chunks/6930-caa30c81857e031d.js\",\"3238\",\"static/chunks/3238-43930ede94cad6aa.js\",\"9480\",\"static/chunks/9480-9175637a00eebb6c.js\",\"6599\",\"static/chunks/6599-17cf0cf39a9c0044.js\",\"3696\",\"static/chunks/app/ai-services/page-917eb09d95a88c8c.js\"],\"\"]\n"])</script>
+  <script>self.__next_f.push([1, "13:I[63238,[\"8943\",\"static/chunks/8627a13e-9a385ebefd985090.js\",\"5364\",\"static/chunks/5364-f27710977812a50a.js\",\"7041\",\"static/chunks/7041-898b442258f79fd8.js\",\"1396\",\"static/chunks/1396-d0db9265e750d8d9.js\",\"7856\",\"static/chunks/7856-ea204568f52f55bb.js\",\"6471\",\"static/chunks/6471-220d12900de2f19f.js\",\"7039\",\"static/chunks/7039-ebd1d475ee70a684.js\",\"6930\",\"static/chunks/6930-caa30c81857e031d.js\",\"3238\",\"static/chunks/3238-43930ede94cad6aa.js\",\"9480\",\"static/chunks/9480-9175637a00eebb6c.js\",\"6599\",\"static/chunks/6599-17cf0cf39a9c0044.js\",\"3696\",\"static/chunks/app/ai-services/page-917eb09d95a88c8c.js\"],\"\"]\n"])</script>
+  <script>self.__next_f.push([1, "14:I[40767,[\"8943\",\"static/chunks/8627a13e-9a385ebefd985090.js\",\"5364\",\"static/chunks/5364-f27710977812a50a.js\",\"7041\",\"static/chunks/7041-898b442258f79fd8.js\",\"1396\",\"static/chunks/1396-d0db9265e750d8d9.js\",\"7856\",\"static/chunks/7856-ea204568f52f55bb.js\",\"6471\",\"static/chunks/6471-220d12900de2f19f.js\",\"7039\",\"static/chunks/7039-ebd1d475ee70a684.js\",\"6930\",\"static/chunks/6930-caa30c81857e031d.js\",\"3238\",\"static/chunks/3238-43930ede94cad6aa.js\",\"9480\",\"static/chunks/9480-9175637a00eebb6c.js\",\"6599\",\"static/chunks/6599-17cf0cf39a9c0044.js\",\"3696\",\"static/chunks/app/ai-services/page-917eb09d95a88c8c.js\"],\"\"]\n"])</script>
+  <script>self.__next_f.push([1, "15:I[8180,[\"8943\",\"static/chunks/8627a13e-9a385ebefd985090.js\",\"5364\",\"static/chunks/5364-f27710977812a50a.js\",\"7041\",\"static/chunks/7041-898b442258f79fd8.js\",\"1396\",\"static/chunks/1396-d0db9265e750d8d9.js\",\"7856\",\"static/chunks/7856-ea204568f52f55bb.js\",\"6471\",\"static/chunks/6471-220d12900de2f19f.js\",\"7039\",\"static/chunks/7039-ebd1d475ee70a684.js\",\"6930\",\"static/chunks/6930-caa30c81857e031d.js\",\"3238\",\"static/chunks/3238-43930ede94cad6aa.js\",\"9480\",\"static/chunks/9480-9175637a00eebb6c.js\",\"6599\",\"static/chunks/6599-17cf0cf39a9c0044.js\",\"3696\",\"static/chunks/app/ai-services/page-917eb09d95a88c8c.js\"],\"\"]\n"])</script>
+  <script>self.__next_f.push([1, "16:I[46866,[\"8943\",\"static/chunks/8627a13e-9a385ebefd985090.js\",\"5364\",\"static/chunks/5364-f27710977812a50a.js\",\"7041\",\"static/chunks/7041-898b442258f79fd8.js\",\"1396\",\"static/chunks/1396-d0db9265e750d8d9.js\",\"7856\",\"static/chunks/7856-ea204568f52f55bb.js\",\"6471\",\"static/chunks/6471-220d12900de2f19f.js\",\"7039\",\"static/chunks/7039-ebd1d475ee70a684.js\",\"6930\",\"static/chunks/6930-caa30c81857e031d.js\",\"3238\",\"static/chunks/3238-43930ede94cad6aa.js\",\"9480\",\"static/chunks/9480-9175637a00eebb6c.js\",\"6599\",\"static/chunks/6599-17cf0cf39a9c0044.js\",\"3696\",\"static/chunks/app/ai-services/page-917eb09d95a88c8c.js\"],\"\"]\n"])</script>
+  <script>self.__next_f.push([1, "17:I[56880,[\"8943\",\"static/chunks/8627a13e-9a385ebefd985090.js\",\"5364\",\"static/chunks/5364-f27710977812a50a.js\",\"7041\",\"static/chunks/7041-898b442258f79fd8.js\",\"1396\",\"static/chunks/1396-d0db9265e750d8d9.js\",\"7856\",\"static/chunks/7856-ea204568f52f55bb.js\",\"6471\",\"static/chunks/6471-220d12900de2f19f.js\",\"7039\",\"static/chunks/7039-ebd1d475ee70a684.js\",\"6930\",\"static/chunks/6930-caa30c81857e031d.js\",\"3238\",\"static/chunks/3238-43930ede94cad6aa.js\",\"9480\",\"static/chunks/9480-9175637a00eebb6c.js\",\"6599\",\"static/chunks/6599-17cf0cf39a9c0044.js\",\"3696\",\"static/chunks/app/ai-services/page-917eb09d95a88c8c.js\"],\"\"]\n"])</script>
+  <script>self.__next_f.push([1, "18:I[41728,[\"8943\",\"static/chunks/8627a13e-9a385ebefd985090.js\",\"5364\",\"static/chunks/5364-f27710977812a50a.js\",\"7041\",\"static/chunks/7041-898b442258f79fd8.js\",\"1396\",\"static/chunks/1396-d0db9265e750d8d9.js\",\"7856\",\"static/chunks/7856-ea204568f52f55bb.js\",\"6471\",\"static/chunks/6471-220d12900de2f19f.js\",\"7039\",\"static/chunks/7039-ebd1d475ee70a684.js\",\"6930\",\"static/chunks/6930-caa30c81857e031d.js\",\"3238\",\"static/chunks/3238-43930ede94cad6aa.js\",\"9480\",\"static/chunks/9480-9175637a00eebb6c.js\",\"6599\",\"static/chunks/6599-17cf0cf39a9c0044.js\",\"3696\",\"static/chunks/app/ai-services/page-917eb09d95a88c8c.js\"],\"\"]\n"])</script>
+  <script>self.__next_f.push([1, "19:I[99480,[\"8943\",\"static/chunks/8627a13e-9a385ebefd985090.js\",\"5364\",\"static/chunks/5364-f27710977812a50a.js\",\"7041\",\"static/chunks/7041-898b442258f79fd8.js\",\"1396\",\"static/chunks/1396-d0db9265e750d8d9.js\",\"7856\",\"static/chunks/7856-ea204568f52f55bb.js\",\"6471\",\"static/chunks/6471-220d12900de2f19f.js\",\"7039\",\"static/chunks/7039-ebd1d475ee70a684.js\",\"6930\",\"static/chunks/6930-caa30c81857e031d.js\",\"3238\",\"static/chunks/3238-43930ede94cad6aa.js\",\"9480\",\"static/chunks/9480-9175637a00eebb6c.js\",\"6599\",\"static/chunks/6599-17cf0cf39a9c0044.js\",\"3696\",\"static/chunks/app/ai-services/page-917eb09d95a88c8c.js\"],\"\"]\n"])</script>
+  <script>self.__next_f.push([1, "1a:I[35501,[\"5364\",\"static/chunks/5364-f27710977812a50a.js\",\"3185\",\"static/chunks/app/layout-b08e73d22492a89e.js\"],\"\"]\n1b:I[88216,[\"5364\",\"static/chunks/5364-f27710977812a50a.js\",\"3185\",\"static/chunks/app/layout-b08e73d22492a89e.js\"],\"ToastContainer\"]\n1c:I[73994,[\"5364\",\"static/chunks/5364-f27710977812a50a.js\",\"3185\",\"static/chunks/app/layout-b08e73d22492a89e.js\"],\"\"]\n"])</script>
+  <script>self.__next_f.push([1, "5:[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/d3df112486f97f47.css\",\"precedence\":\"next\",\"crossOrigin\":\"\"}],[\"$\",\"link\",\"1\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/9ca5f1e4ca029360.css\",\"precedence\":\"next\",\"crossOrigin\":\"\"}],[\"$\",\"link\",\"2\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/a40edaa4df10f24c.css\",\"precedence\":\"next\",\"crossOrigin\":\"\"}]],[\"$\",\"$L9\",null,{\"buildId\":\"0zW5lsm9sYe0Jqm0zPPAc\",\"assetPrefix\":\"\",\"initialCanonicalUrl\":\"/ai-services\",\"initialTree\":[\"\",{\"children\":[\"ai-services\",{\"children\":[\"__PAGE__\",{}]}]},\"$undefined\",\"$undefined\",true],\"initialHead\":[false,\"$La\"],\"globalErrorComponent\":\"$b\",\"children\":[null,[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"meta\",null,{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1.0\"}],[\"$\",\"$Lc\",null,{}],[\"$\",\"link\",null,{\"rel\":\"preload\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.googleapis.com\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.gstatic.com\",\"crossOrigin\":\"anonymous\"}],[\"$\",\"link\",null,{\"href\":\"https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800\u0026family=Montserrat:wght@300;400;500;600;700\u0026family=Poppins:ital,wght@0,100;0,200;0,700;1,100;1,300\u0026display=swap\",\"rel\":\"stylesheet\"}],[\"$\",\"link\",null,{\"href\":\"https://fonts.googleapis.com/css2?family=Content:wght@400;700\u0026family=Manrope:wght@200;300;400;500;600;700;800\u0026family=Montserrat:wght@300;400;500;600;700\u0026family=Poppins:ital,wght@0,100;0,200;0,700;1,100;1,300\u0026display=swap\",\"rel\":\"stylesheet\"}],[\"$\",\"link\",null,{\"href\":\"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900\u0026display=swap\",\"rel\":\"stylesheet\"}],[\"$\",\"link\",null,{\"rel\":\"stylesheet\",\"href\":\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\"}],[\"$\",\"noscript\",null,{\"children\":[\"$\",\"iframe\",null,{\"src\":\"https://www.googletagmanager.com/ns.html?id=GTM-WF8GV7S\",\"height\":\"0\",\"width\":\"0\",\"style\":{\"display\":\"none\",\"visibility\":\"hidden\"}}]}]]}],[\"$\",\"body\",null,{\"children\":[[\"$\",\"$Ld\",null,{\"children\":[\"$\",\"$Le\",null,{\"children\":[[\"$\",\"$Lf\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\"],\"loading\":\"$undefined\",\"loadingStyles\":\"$undefined\",\"loadingScripts\":\"$undefined\",\"hasLoading\":false,\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L10\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":\"404\"}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],\"notFoundStyles\":[],\"childProp\":{\"current\":[\"$\",\"$Lf\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"ai-services\",\"children\"],\"loading\":\"$undefined\",\"loadingStyles\":\"$undefined\",\"loadingScripts\":\"$undefined\",\"hasLoading\":false,\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L10\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"notFoundStyles\":\"$undefined\",\"childProp\":{\"current\":[\"$L11\",[\"$\",\"div\",null,{\"children\":[[\"$\",\"$L12\",null,{\"PageMeta\":{\"title\":\"AI Services | AI Solutions Provider | Base2Brand\",\"description\":\"Explore AI services and solutions from Base2Brand. We offer innovative AI services to enhance business performance with cutting-edge technology and tailored solutions.\",\"canonical\":\"\",\"image\":\"/img/portfolio/b1.png\"}}],[\"$\",\"$L13\",null,{}],[\"$\",\"$L14\",null,{}],[\"$\",\"$L15\",null,{}],[\"$\",\"div\",null,{\"style\":{\"background\":\"linear-gradient(84deg, rgb(0, 0, 0) 5%, rgb(34, 24, 83) 91%)\"},\"className\":\"pt-5 pb-5\",\"children\":[\"$\",\"div\",null,{\"className\":\"container\",\"children\":[[\"$\",\"div\",null,{\"className\":\"text-center \",\"children\":[[\"$\",\"h2\",null,{\"className\":\"b2b-partners-heading text-white\",\"data-aos\":\"fade-up\",\"children\":\"The Role of Artificial Intelligence Service Providers\"}],[\"$\",\"p\",null,{\"className\":\"text-white  m-0\",\"data-aos\":\"fade-up\",\"children\":[\"Choosing the right artificial intelligence service providers is crucial for implementing effective AI solutions. Our expertise at \",[\"$\",\"br\",null,{}],\" Base2Brand spans multiple industries, providing businesses with customized AI strategies that align with their goals. \",[\"$\",\"br\",null,{}],\" Whether you need AI integration, consultancy, or full-scale automation, our AI service company ensures seamless \",[\"$\",\"br\",null,{}],\"deployment and optimization.\"]}]]}],[\"$\",\"div\",null,{\"className\":\"d-flex justify-content-center pt-4\",\"children\":[\"$\",\"button\",null,{\"className\":\"b2b-btn b2b-btn-sm m-0\",\"data-aos\":\"fade-up\",\"children\":\"Consultation Now\"}]}]]}]}],[\"$\",\"div\",null,{\"className\":\"pt-5 pb-5 text-center text-sm-start\",\"style\":{\"background\":\"#1F222F\"},\"children\":[\"$\",\"$L16\",null,{\"banner\":\"https://res.cloudinary.com/driveuyen/image/upload/v1742192989/base2brand_website/home/businessman-using-ai-artificial-intelligence-planning-business-growth-future-ai-business-concept_sbp0tf.png\",\"heading\":\"AI Adoption: The Future of Business Growth\",\"para\":\"The demand for AI services is growing rapidly, with 90% of top-performing companies investing in AI solutions to drive innovation. As businesses continue to embrace AI, the need for expert consulting in artificial intelligence is more critical than ever. Our AI consultancy services empower organizations to leverage AI effectively, ensuring long-term success and adaptability in a fast-evolving digital landscape.\",\"btnname\":\"Get Free Consultation\"}]}],[\"$\",\"$L17\",null,{}],[\"$\",\"div\",null,{\"children\":[\"$\",\"div\",null,{\"style\":{\"background\":\"#1F222F\"},\"className\":\"pt-5 pb-5\",\"children\":[\"$\",\"div\",null,{\"className\":\"container\",\"children\":[[\"$\",\"div\",null,{\"className\":\"text-center \",\"children\":[[\"$\",\"h2\",null,{\"className\":\"b2b-partners-heading text-white\",\"data-aos\":\"fade-up\",\"children\":\"The Role of Artificial Intelligence Service Providers\"}],[\"$\",\"p\",null,{\"className\":\"text-white  m-0\",\"data-aos\":\"fade-up\",\"children\":[\"Choosing the right artificial intelligence service providers is crucial for implementing effective AI solutions. Our expertise at\",\" \",[\"$\",\"br\",null,{}],\" Base2Brand spans multiple industries, providing businesses with customized AI strategies that align with their goals. \",[\"$\",\"br\",null,{}],\" \",\"Whether you need AI integration, consultancy, or full-scale automation, our AI service company ensures seamless \",[\"$\",\"br\",null,{}],\"deployment and optimization.\"]}]]}],[\"$\",\"div\",null,{\"className\":\"d-flex justify-content-center pt-4\",\"children\":[\"$\",\"button\",null,{\"className\":\"b2b-btn b2b-btn-sm m-0\",\"data-aos\":\"fade-up\",\"children\":\"Consultation Now\"}]}]]}]}]}],[\"$\",\"$L18\",null,{}],[\"$\",\"$L19\",null,{}]]}],null],\"segment\":\"__PAGE__\"},\"styles\":[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/69f81e06845cd7ae.css\",\"precedence\":\"next\",\"crossOrigin\":\"\"}],[\"$\",\"link\",\"1\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/e1773de851f20636.css\",\"precedence\":\"next\",\"crossOrigin\":\"\"}],[\"$\",\"link\",\"2\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/04f3a9ef4f24f829.css\",\"precedence\":\"next\",\"crossOrigin\":\"\"}]]}],\"segment\":\"ai-services\"},\"styles\":null}],[\"$\",\"$L1a\",null,{}]]}]}],[\"$\",\"$L1b\",null,{}],[\"$\",\"$L1c\",null,{\"async\":true,\"src\":\"https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js\",\"integrity\":\"sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r\",\"crossOrigin\":\"anonymous\"}],[\"$\",\"$L1c\",null,{\"async\":true,\"src\":\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js\",\"integrity\":\"sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+\",\"crossOrigin\":\"anonymous\"}],[\"$\",\"$L1c\",null,{\"async\":true,\"src\":\"https://www.googletagmanager.com/gtag/js?id=G-82ZFJ2HBGY\"}],[\"$\",\"$L1c\",null,{\"children\":\"window.dataLayer = window.dataLayer || [];\\n            function gtag(){dataLayer.push(arguments);}\\n            gtag('js', new Date());\\n            gtag('config', 'G-82ZFJ2HBGY');\"}],[\"$\",\"$L1c\",null,{\"type\":\"text/javascript\",\"children\":\"(function(c,l,a,r,i,t,y){\\n                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};\\n                t=l.createElement(r);t.async=1;t.src=\\\"https://www.clarity.ms/tag/\\\"+i;\\n                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);\\n            })(window, document, \\\"clarity\\\", \\\"script\\\", \\\"qgutziiy6g\\\");\"}],[\"$\",\"$L1c\",null,{\"children\":\"(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\\n            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\\n            j=d.createElement(s),dl=l!='dataLayer'?'\u0026l='+l:'';j.async=true;j.src=\\n            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\\n              })(window,document,'script','dataLayer','GTM-WF8GV7S'  );\"}],[\"$\",\"$L1c\",null,{\"type\":\"application/ld+json\",\"children\":\"\\n         \\n\\\"@context\\\": \\\"http://schema.org\\\",\\n\\\"@type\\\": \\\"Organization\\\",\\n\\\"name\\\": \\\"Base2Brand Infotech Pvt Ltd\\\",\\n\\\"url\\\": \\\"https://www.base2brand.com\\\",\\n\\\"logo\\\": \\\"https://www.base2brand.com/logo.png\\\",\\n\\\"sameAs\\\": [\\n\\\"https://www.facebook.com/Base2Brand\\\",\\n\\\"https://www.linkedin.com/company/base2brand\\\",\\n\\\"https://www.instagram.com/base2brand\\\"\\n],\\n\\\"contactPoint\\\": {\\n\\\"@type\\\": \\\"ContactPoint\\\",\\n\\\"telephone\\\": \\\"+91 9872487850\\\",\\n\\\"contactType\\\": \\\"Customer Service\\\",\\n\\\"areaServed\\\": \\\"IN\\\",\\n\\\"availableLanguage\\\": \\\"English\\\"\\n},\\n\\\"address\\\": {\\n\\\"@type\\\": \\\"PostalAddress\\\",\\n\\\"streetAddress\\\": \\\"F-209, Sector 74\\\",\\n\\\"addressLocality\\\": \\\"Mohali\\\",\\n\\\"addressRegion\\\": \\\"Chandigarh\\\",\\n\\\"postalCode\\\": \\\"160074\\\",\\n\\\"addressCountry\\\": \\\"IN\\\"\\n},\\n\\\"description\\\": \\\"Base2Brand Infotech Pvt Ltd is a certified Shopify Partner offering expert services in eCommerce development, design, and customizations.\\\",\\n         \\\"sameAs\\\": \\\"https://www.shopify.com/partners/directory/partner/base2brand4\\\"\"}],[\"$\",\"$L1c\",null,{\"children\":\"!function(f,b,e,v,n,t,s)\\n{if(f.fbq)return;n=f.fbq=function(){n.callMethod?\\nn.callMethod.apply(n,arguments):n.queue.push(arguments)};\\nif(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';\\nn.queue=[];t=b.createElement(e);t.async=!0;\\nt.src=v;s=b.getElementsByTagName(e)[0];\\ns.parentNode.insertBefore(t,s)}(window, document,'script',\\n'https://connect.facebook.net/en_US/fbevents.js');\\nfbq('init', '1057584673056804');\\nfbq('track', 'PageView');\"}],[\"$\",\"noscript\",null,{\"children\":\" \u003cimg height=\\\"1\\\" width=\\\"1\\\" style=\\\"display:none\\\"\\nsrc=\\\"https://www.facebook.com/tr?id=1057584673056804\u0026ev=PageView\u0026noscript=1\\\"\\n/\u003e\"}]]}]]}],null]}]]\n"])</script>
+  <script>self.__next_f.push([1, "a:[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}],[\"$\",\"meta\",\"1\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"2\",{\"name\":\"robots\",\"content\":\"follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large\"}],[\"$\",\"meta\",\"3\",{\"name\":\"google-site-verification\",\"content\":\"bUGDRRzEBb5VQ8pNq6l7Qtp-sQJg15CvaLJ2a2O8ZH8\"}],[\"$\",\"link\",\"4\",{\"rel\":\"icon\",\"href\":\"/favicon.ico\",\"type\":\"image/x-icon\",\"sizes\":\"16x16\"}],[\"$\",\"meta\",\"5\",{\"name\":\"next-size-adjust\"}]]\n11:null\n"])</script>
+  <script>self.__next_f.push([1, ""])</script>
+  <div>
+    <div>
+      <header>
+        <nav class="navbar navbar-expand-xl pt-4 pb-4 ps-3 pe-3 position-relative">
+        <div class="container-fluid"><a class="flex items-center navbar-brand pt-0" href="/"><img
+              alt="Sample Cloudinary Image" loading="lazy" width="1000" height="500" decoding="async" data-nimg="1"
+              src="./images/logo.e9cf2080_1_egmydg.svg" style="color: transparent; max-width: 299px;"></a><button
+            class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar"><span class="navbar-toggler-icon"></span><span
+              class="navbar-toggler-icon"></span><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+            <ul class="navbar-nav main-menu align-items-center d-flex flex-wrap Header_link">
+              <li><a class="active py-2 px-1" aria-current="page" href="/">Home</a></li>
+              <li class="dropdown"><a class="dropdown-toggle block py-2 px-1" href="./about">About Us</a>
+                <ul class="dropdown-menu ph_align_drop">
+                  <li class="mega-menu">
+                    <div class="row justify-content-center">
+                      <div class="col-lg-3 mb-3"><a href="./about">
+                          <div class="menuInner b2b-lightBlue-bg">
+                            <h3 class="b2b-title-text text-black">About Us</h3>
+                            <div class="d-flex align-items-center justify-content-between">
+                              <p class="menuText mb-0">We are super efficient and humble to serve you</p><span
+                                class="menuIcon pl-3"></span>
+                            </div>
+                          </div>
+                        </a></div>
+                      <div class="col-lg-3 mb-3"><a href="./team">
+                          <div class="menuInner b2b-pink-bg">
+                            <h3 class="b2b-title-text text-black">Team</h3>
+                            <div class="d-flex align-items-center justify-content-between">
+                              <p class="menuText mb-0">We are proud of our experienced and accomplished team!</p><span
+                                class="menuIcon pl-3"></span>
+                            </div>
+                          </div>
+                        </a></div>
+                      <div class="col-lg-3 mb-3"><a href="./career">
+                          <div class="menuInner b2b-lightBlue-bg">
+                            <h3 class="b2b-title-text text-black">Career</h3>
+                            <div class="d-flex align-items-center justify-content-between">
+                              <p class="menuText mb-0">Check Latest Vacancies</p><span class="menuIcon pl-3"></span>
+                            </div>
+                          </div>
+                        </a></div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown"><a class="dropdown-toggle block py-2 px-1" href="./services">Services</a>
+                <ul class="dropdown-menu ph_align_drop">
+                  <li class="mega-menu">
+                    <div class="row justify-content-center">
+                      <div class="col-lg-3 mb-3"><a href="./hire-shopify-developers">
+                          <div class="menuInner b2b-pink-bg">
+                            <h3 class="b2b-title-text text-black">Shopify Development</h3>
+                            <div class="d-flex align-items-center justify-content-between">
+                              <p class="menuText mb-0">Create a user-friendly store</p><span
+                                class="menuIcon pl-3"></span>
+                            </div>
+                          </div>
+                        </a></div>
+                      <div class="col-lg-3 mb-3"><a href="./digital-marketing">
+                          <div class="menuInner b2b-lightBlue-bg">
+                            <h3 class="b2b-title-text text-black">Digital Marketing</h3>
+                            <div class="d-flex align-items-center justify-content-between">
+                              <p class="menuText mb-0">Implement a results-driven digital marketing strategy</p><span
+                                class="menuIcon pl-3"></span>
+                            </div>
+                          </div>
+                        </a></div>
+                      <div class="col-lg-3 mb-3"><a href="./graphic">
+                          <div class="menuInner b2b-pink-bg">
+                            <h3 class="b2b-title-text text-black">Graphic &amp; UI/UX designing</h3>
+                            <div class="d-flex align-items-center justify-content-between">
+                              <p class="menuText mb-0">Creating Visual Solutions</p><span class="menuIcon pl-3"></span>
+                            </div>
+                          </div>
+                        </a></div>
+                    </div>
+                    <div class="row justify-content-center">
+                      <div class="col-lg-3 mb-3"><a href="./e-commerce">
+                          <div class="menuInner b2b-lightBlue-bg">
+                            <h3 class="b2b-title-text text-black">Ecommerce</h3>
+                            <div class="d-flex align-items-center justify-content-between">
+                              <p class="menuText mb-0">Increase online sales seamlessly</p><span
+                                class="menuIcon pl-3"></span>
+                            </div>
+                          </div>
+                        </a></div>
+                      <div class="col-lg-3 mb-3"><a href="./web-application">
+                          <div class="menuInner b2b-pink-bg">
+                            <h3 class="b2b-title-text text-black">Web Development</h3>
+                            <div class="d-flex align-items-center justify-content-between">
+                              <p class="menuText mb-0">Develop a modern, responsive website</p><span
+                                class="menuIcon pl-3"></span>
+                            </div>
+                          </div>
+                        </a></div>
+                      <div class="col-lg-3 mb-3"><a href="./app-development">
+                          <div class="menuInner b2b-lightBlue-bg">
+                            <h3 class="b2b-title-text text-black">Mobile App Development</h3>
+                            <div class="d-flex align-items-center justify-content-between">
+                              <p class="menuText mb-0">Innovative apps for mobile devices</p><span
+                                class="menuIcon pl-3"></span>
+                            </div>
+                          </div>
+                        </a></div>
+                    </div>
+                    <div class="row justify-content-center">
+                      <div class="col-lg-3 mb-3"><a href="./devops-services">
+                          <div class="menuInner b2b-pink-bg">
+                            <h3 class="b2b-title-text text-black">DevOps Services</h3>
+                            <div class="d-flex align-items-center justify-content-between">
+                              <p class="menuText mb-0">Seamless Deployment and Scalable Infrastructure Solutions.</p>
+                              <span class="menuIcon pl-3"></span>
+                            </div>
+                          </div>
+                        </a></div>
+                      <div class="col-lg-3 mb-3"><a href="./ai-services">
+                          <div class="menuInner b2b-lightBlue-bg">
+                            <h3 class="b2b-title-text text-black">AI Services</h3>
+                            <div class="d-flex align-items-center justify-content-between">
+                              <p class="menuText mb-0">Innovative AI Solutions for Smarter Business.</p><span
+                                class="menuIcon pl-3"></span>
+                            </div>
+                          </div>
+                        </a></div>
+                      <div class="col-lg-3 mb-3"><a href="./back-office-services">
+                          <div class="menuInner b2b-pink-bg">
+                            <h3 class="b2b-title-text text-black">Back Office Services</h3>
+                            <div class="d-flex align-items-center justify-content-between">
+                              <p class="menuText mb-0">Smart Back Office Support for Smarter Businesses</p><span
+                                class="menuIcon pl-3"></span>
+                            </div>
+                          </div>
+                        </a></div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li><a class="block py-2 px-1" href="./portfolio">Portfolio</a></li>
+              <li><a class="block py-2 px-1" href="./case-study">Case Study</a></li>
+              <li class="dropdown"><a class="dropdown-toggle block py-2 px-1" href="./erp-integration">ERP
+                  Integration</a>
+                <ul class="dropdown-menu ph_align_drop">
+                  <li class="mega-menu">
+                    <div class="row justify-content-center">
+                      <div class="col-lg-3 mb-3"><a href="./uni-commerce">
+                          <div class="menuInner b2b-pink-bg erp-before">
+                            <h3 class="b2b-title-text text-black d-flex align-items-start">Uni-Commerce Integration With
+                              Shopify</h3>
+                            <div class="d-flex align-items-start justify-content-between">
+                              <p class="menuText mb-0">Simplify inventory management with Uni-Commerce integration on
+                                Shopify</p>
+                              <div class="nav_image"><img alt="" loading="lazy" width="1000" height="500"
+                                  decoding="async" data-nimg="1" class="integration_cross_logo"
+                                  srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1738592043/base2brand_website/shopify-integration/Group_1707480204_bdtz0u?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738592043/base2brand_website/shopify-integration/Group_1707480204_bdtz0u?_a=BAVAZGAO0 2x"
+                                  src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738592043/base2brand_website/shopify-integration/Group_1707480204_bdtz0u"
+                                  style="color: transparent; width: 60px; height: auto; object-fit: cover; margin-right: 10px;">
+                              </div>
+                            </div>
+                          </div>
+                        </a></div>
+                      <div class="col-lg-3 mb-3"><a href="./odoo">
+                          <div class="menuInner b2b-lightBlue-bg erp-before">
+                            <h3 class="b2b-title-text text-black d-flex align-items-start">Odoo Integration With Shopify
+                            </h3>
+                            <div class="d-flex align-items-start justify-content-between">
+                              <p class="menuText mb-0">Optimize inventory and business operations with Odoo and Shopify
+                                integration</p>
+                              <div class="nav_image"><img alt="" loading="lazy" width="1000" height="500"
+                                  decoding="async" data-nimg="1" class="integration_cross_logo"
+                                  srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1738592331/base2brand_website/shopify-integration/Group_1707480205_1_zfmg4t?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738592331/base2brand_website/shopify-integration/Group_1707480205_1_zfmg4t?_a=BAVAZGAO0 2x"
+                                  src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738592331/base2brand_website/shopify-integration/Group_1707480205_1_zfmg4t"
+                                  style="color: transparent; width: 60px; height: auto; object-fit: cover; margin-right: 10px;">
+                              </div>
+                            </div>
+                          </div>
+                        </a></div>
+                      <div class="col-lg-3 mb-3"><a href="./easy-ecom">
+                          <div class="menuInner b2b-pink-bg erp-before">
+                            <h3 class="b2b-title-text text-black d-flex align-items-start">Easy Ecom Integration With
+                              Shopify</h3>
+                            <div class="d-flex align-items-start justify-content-between">
+                              <p class="menuText mb-0">Streamline inventory and order management with Easy Ecom
+                                integration on Shopify</p>
+                              <div class="nav_image"><img alt="" loading="lazy" width="1000" height="500"
+                                  decoding="async" data-nimg="1" class="integration_cross_logo"
+                                  srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1738592324/base2brand_website/shopify-integration/Group_1707480203_omwokg?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738592324/base2brand_website/shopify-integration/Group_1707480203_omwokg?_a=BAVAZGAO0 2x"
+                                  src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738592324/base2brand_website/shopify-integration/Group_1707480203_omwokg"
+                                  style="color: transparent; width: 60px; height: auto; object-fit: cover; margin-right: 10px;">
+                              </div>
+                            </div>
+                          </div>
+                        </a></div>
+                    </div>
+                    <div class="row justify-content-center">
+                      <div class="col-lg-3 mb-3"><a href="./increff">
+                          <div class="menuInner b2b-lightBlue-bg erp-before">
+                            <h3 class="b2b-title-text text-black d-flex align-items-start">Increff Integration With
+                              Shopify</h3>
+                            <div class="d-flex align-items-start justify-content-between">
+                              <p class="menuText mb-0">Enhance inventory control with Increff integration for Shopify
+                              </p>
+                              <div class="nav_image"><img alt="" loading="lazy" width="1000" height="500"
+                                  decoding="async" data-nimg="1" class="integration_cross_logo"
+                                  srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1738592440/base2brand_website/shopify-integration/Group_1707480192_wmpgit?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738592440/base2brand_website/shopify-integration/Group_1707480192_wmpgit?_a=BAVAZGAO0 2x"
+                                  src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738592440/base2brand_website/shopify-integration/Group_1707480192_wmpgit"
+                                  style="color: transparent; width: 60px; height: auto; object-fit: cover; margin-right: 10px;">
+                              </div>
+                            </div>
+                          </div>
+                        </a></div>
+                      <div class="col-lg-3 mb-3"><a href="./custom-recharge">
+                          <div class="menuInner b2b-pink-bg erp-before">
+                            <h3 class="b2b-title-text text-black d-flex align-items-start">Custom Recharge Integration
+                              With Hydrogen</h3>
+                            <div class="d-flex align-items-start justify-content-between">
+                              <p class="menuText mb-0">Create a responsive Shopify site with Hydrogen recharge
+                                integration</p>
+                              <div class="nav_image"><img alt="" loading="lazy" width="1000" height="500"
+                                  decoding="async" data-nimg="1" class="integration_cross_logo"
+                                  srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1738592328/base2brand_website/shopify-integration/Group_1707480201_r3dn6i?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738592328/base2brand_website/shopify-integration/Group_1707480201_r3dn6i?_a=BAVAZGAO0 2x"
+                                  src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738592328/base2brand_website/shopify-integration/Group_1707480201_r3dn6i"
+                                  style="color: transparent; width: 60px; height: auto; object-fit: cover; margin-right: 10px;">
+                              </div>
+                            </div>
+                          </div>
+                        </a></div>
+                      <div class="col-lg-3 mb-3"><a href="./orderwise">
+                          <div class="menuInner b2b-lightBlue-bg erp-before">
+                            <h3 class="b2b-title-text text-black d-flex align-items-start">OrderWise Integration With
+                              Shopify</h3>
+                            <div class="d-flex align-items-start justify-content-between">
+                              <p class="menuText mb-0">Effortlessly manage inventory and orders with OrderWise
+                                integration for Shopify.</p>
+                              <div class="nav_image"><img alt="" loading="lazy" width="1000" height="500"
+                                  decoding="async" data-nimg="1" class="integration_cross_logo"
+                                  srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1738592327/base2brand_website/shopify-integration/Group_1707480206_lf54ys?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738592327/base2brand_website/shopify-integration/Group_1707480206_lf54ys?_a=BAVAZGAO0 2x"
+                                  src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738592327/base2brand_website/shopify-integration/Group_1707480206_lf54ys"
+                                  style="color: transparent; width: 60px; height: auto; object-fit: cover; margin-right: 10px;">
+                              </div>
+                            </div>
+                          </div>
+                        </a></div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="d-block d-xl-none"><a href="./contact-us">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="d-flex flex-wrap align-items-center contact-num">
+            <ul class="navbar-nav align-items-center d-flex flex-wrap Header_link">
+              <li class="menuBtn"><a href="./contact-us"><span>Contact</span></a></li>
+              <li class="dropdown iconHover">
+                <div class="call_number_drop"><img alt="Call image" loading="lazy" width="42" height="42"
+                    decoding="async" data-nimg="1" class="call_icon"
+                    srcset="https://res.cloudinary.com/driveuyen/image/upload/c_fill,w_48,h_48,g_auto/f_auto/q_auto/v1735197673/base2brand_website/home/call1_pkhomy?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_fill,w_96,h_96,g_auto/f_auto/q_auto/v1735197673/base2brand_website/home/call1_pkhomy?_a=BAVAZGAO0 2x"
+                    src="/driveuyen/image/upload/c_fill,w_96,h_96,g_auto/f_auto/q_auto/v1735197673/base2brand_website/home/call1_pkhomy"
+                    style="color: transparent; max-width: 42px;"></div>
+                <ul class="dropdown-menu dropdown-menu-right ph_align_drop">
+                  <li class="mega-menu"><a href="">
+                      <div class="menuInner b2b-blue-bg">
+                        <div class="phoneMenuIcon"><img alt="" loading="lazy" width="22" height="25" decoding="async"
+                            data-nimg="1"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_32/f_auto/q_auto/v1735197214/base2brand_website/home/phone_n2jqo5?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_48/f_auto/q_auto/v1735197214/base2brand_website/home/phone_n2jqo5?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_48/f_auto/q_auto/v1735197214/base2brand_website/home/phone_n2jqo5"
+                            style="color: transparent; max-width: 22px;"></div>
+                        <h4 class="b2b-title-text text-white">Let's Connect with Base2brand Team</h4>
+                      </div>
+                    </a></li>
+                  <li class="mega-menu">
+                    <div class="menuInner border-bottom pt-3">
+                      <div class="phoneMenuIcon"></div>
+                      <h4 class="b2b-title-text text-white text-uppercase">for sales inquiry</h4>
+                    </div>
+                  </li>
+                  <li class="mega-menu"><a href="./tel:+919872487850">
+                      <div class="menuInner align-items-center">
+                        <div class="phoneMenuIcon"><img alt="" loading="lazy" width="24" height="18" decoding="async"
+                            data-nimg="1"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_32/f_auto/q_auto/v1735197192/base2brand_website/home/india_mvji31?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_48/f_auto/q_auto/v1735197192/base2brand_website/home/india_mvji31?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_48/f_auto/q_auto/v1735197192/base2brand_website/home/india_mvji31"
+                            style="color: transparent; max-width: 24px;"></div>
+                        <h3 class="b2b-sub-text-gk text-white">+91 (987) 248 7850</h3>
+                      </div>
+                    </a></li>
+                  <li class="mega-menu"><a href="./mailto:tech@base2brand.com">
+                      <div class="menuInner align-items-center">
+                        <div class="phoneMenuIcon"><img alt="" loading="lazy" width="22" height="16" decoding="async"
+                            data-nimg="1"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_32/f_auto/q_auto/v1735197214/base2brand_website/home/mail_bqrib5?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_48/f_auto/q_auto/v1735197214/base2brand_website/home/mail_bqrib5?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_48/f_auto/q_auto/v1735197214/base2brand_website/home/mail_bqrib5"
+                            style="color: transparent; max-width: 22px;"></div>
+                        <h3 class="b2b-sub-text-gk text-white">tech@base2brand.com</h3>
+                      </div>
+                    </a></li>
+                  <li class="mega-menu">
+                    <div class="menuInner border-bottom pt-3">
+                      <div class="phoneMenuIcon"></div>
+                      <h4 class="b2b-title-text text-white text-uppercase">for quick connect :</h4>
+                    </div>
+                  </li>
+                  <li class="mega-menu"><a href="./html/919041700209.html">
+                      <div class="menuInner align-items-center">
+                        <div class="phoneMenuIcon"><img alt="" loading="lazy" width="25" height="25" decoding="async"
+                            data-nimg="1"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_32/f_auto/q_auto/v1735197216/base2brand_website/home/whatsapp_audnqw?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_64/f_auto/q_auto/v1735197216/base2brand_website/home/whatsapp_audnqw?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_64/f_auto/q_auto/v1735197216/base2brand_website/home/whatsapp_audnqw"
+                            style="color: transparent; max-width: 25px;"></div>
+                        <h3 class="b2b-sub-text-gk text-white">+91 (904) 1700209</h3>
+                      </div>
+                    </a></li>
+                  <li class="mega-menu"><a href="./html/tel:+17209035933.html">
+                      <div class="menuInner align-items-center">
+                        <div class="phoneMenuIcon"><img alt="" loading="lazy" width="28" height="28" decoding="async"
+                            data-nimg="1"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_32/f_auto/q_auto/v1735197215/base2brand_website/home/usa_ocqrxt?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_64/f_auto/q_auto/v1735197215/base2brand_website/home/usa_ocqrxt?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_64/f_auto/q_auto/v1735197215/base2brand_website/home/usa_ocqrxt"
+                            style="color: transparent; max-width: 28px;"></div>
+                        <h3 class="b2b-sub-text-gk text-white">+1 (720) 9035933</h3>
+                      </div>
+                    </a></li>
+                  <li class="mega-menu"><a href="./html/tel:+0047448435973.html">
+                      <div class="menuInner align-items-center">
+                        <div class="phoneMenuIcon"><img alt="" loading="lazy" width="28" height="28" decoding="async"
+                            data-nimg="1"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_32/f_auto/q_auto/v1735197215/base2brand_website/home/uk_oupvdx?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_64/f_auto/q_auto/v1735197215/base2brand_website/home/uk_oupvdx?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_64/f_auto/q_auto/v1735197215/base2brand_website/home/uk_oupvdx"
+                            style="color: transparent; max-width: 28px;"></div>
+                        <h3 class="b2b-sub-text-gk text-white">+ (0044) 7448435973</h3>
+                      </div>
+                    </a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      </header>
+      <div class="odoo_banner">
+        <div class="inte_com_banner pt-0 pb-0"
+          style="background-image: url(&quot;https://res.cloudinary.com/driveuyen/image/upload/v1741673209/base2brand_website/home/radial_bg_orzxvh_2_tfauei.svg&quot;); background-repeat: no-repeat; width: 100%;">
+          <div class="container propsbanner">
+            <div class="row align-items-center">
+              <div class="col-md-7 props_image_banner">
+                <div class="typewriterWrap d-flex align-items-center gap-2 callc_banner_animation">
+                  <h1 class="erp_heading">Expert <span style="color: rgb(33, 156, 74);">Easy Ecom</span> Custom
+                    <br>Integration with Shopify</h1>
+                </div>
+                <p class="sub_text text-white mt-3 lh-3 col-md-10">Streamline Operations, Sync Inventory, Manage
+                  Customers, and Enhance Efficiency with Full-Featured Custom Integrations from a Single Platform!</p>
+                <div class="mt-4"><button class="b2b-btn b2b-btn-sm m-0">Book a Free Demo</button></div>
+              </div>
+              <div class="col-md-5 pb-5 d-flex justify-content-center props_image_banner"><img alt="banner"
+                  loading="lazy" width="1000" height="500" decoding="async" data-nimg="1"
+                  srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1738133164/base2brand_website/shopify-integration/Group_1707480171_nndrgz?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738133164/base2brand_website/shopify-integration/Group_1707480171_nndrgz?_a=BAVAZGAO0 2x"
+                  src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738133164/base2brand_website/shopify-integration/Group_1707480171_nndrgz"
+                  style="color: transparent;"></div>
+            </div>
+          </div><img alt="demo" loading="lazy" width="1000" height="500" decoding="async" data-nimg="1"
+            class="inte_com_banner_img"
+            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1738134463/base2brand_website/shopify-integration/easy_Ecom_sofvm9?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738134463/base2brand_website/shopify-integration/easy_Ecom_sofvm9?_a=BAVAZGAO0 2x"
+            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738134463/base2brand_website/shopify-integration/easy_Ecom_sofvm9"
+            style="color: transparent;">
+        </div>
+      </div>
+      <div class="custom_bar d-flex flex-column align-items-center pt-4 pb-5">
+        <div class="container d-flex flex-column align-items-center">
+          <h3 class="inte-sub-heading pt-2 ani_faq_h3 text-white m-0"><span class="colorbartitle">Easy Ecom
+            </span>Shopify Integration Services</h3>
+          <p class="sub_text text-center pt-3 text-white m-0 inte_dis_cus_p">At Base2Brand, we specialize in Shopify
+            development and have demonstrated expertise in Odoo integration. Our team has successfully worked on
+            projects involving Odoo integration with Shopify, ensuring seamless operations for e-commerce businesses.
+            With our in-depth knowledge and experience, we can help your store achieve optimal efficiency through
+            effective Odoo integration services, delivering Full-Featured Integrations for Odoo that drive business
+            success.</p>
+        </div>
+      </div>
+      <div class="feature5_inte_com pt-5">
+        <h2 class="inte-sub-heading2 inte_choose_h2 text-black ps-3 pe-3">Why Choose <span
+            class="b2b_inte_com inte_com_blue">Base<span class="b2b_2">2</span>Brand</span> for <span
+            class="inte_com_blue">Easy Ecom</span> Shopify Integration?</h2>
+        <div class="title_dis_choose d-flex justify-content-center">
+          <p class="b2b-title-text text-black inte_dis_choose_p">Base2Brand offers comprehensive Easy Ecom integration
+            solutions, ensuring that your Shopify store functions seamlessly with Easy Ecom</p>
+        </div>
+        <div class="pb-4 pt-4">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-6 mb-2 choose_outer">
+                <div class="service_box_outer call_cen_servics">
+                  <div class="works-servics-radius">
+                    <div class="serviceIcon">
+                      <div class="inte_img_choose d-flex"><img alt="Icon" loading="lazy" width="1000" height="500"
+                          decoding="async" data-nimg="1"
+                          srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1738133750/base2brand_website/shopify-integration/Group_1_12_sg5llv?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738133750/base2brand_website/shopify-integration/Group_1_12_sg5llv?_a=BAVAZGAO0 2x"
+                          src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738133750/base2brand_website/shopify-integration/Group_1_12_sg5llv"
+                          style="color: transparent; width: 90px; object-fit: contain;"></div>
+                      <h3 class="inte_choose_h3 text-center text-black inte_heading1 pt-3">Order Syncing</h3>
+                      <div class="d-flex justify-content-between align-items-end mt-1 mt-sm-1">
+                        <p class="sub_text_choose text-center text-black inte_work_heading">Our Unicommerce integration
+                          service ensures seamless order syncing, enabling real-time updates across your Shopify store
+                          and backend systems for efficient order management.<br></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 mb-2 choose_outer">
+                <div class="service_box_outer call_cen_servics">
+                  <div class="works-servics-radius">
+                    <div class="serviceIcon">
+                      <div class="inte_img_choose d-flex"><img alt="Icon" loading="lazy" width="1000" height="500"
+                          decoding="async" data-nimg="1"
+                          srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1738133742/base2brand_website/shopify-integration/Group_2_12_u4psna?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738133742/base2brand_website/shopify-integration/Group_2_12_u4psna?_a=BAVAZGAO0 2x"
+                          src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738133742/base2brand_website/shopify-integration/Group_2_12_u4psna"
+                          style="color: transparent; width: 90px; object-fit: contain;"></div>
+                      <h3 class="inte_choose_h3 text-center text-black inte_heading1 pt-3">Inventory Syncing</h3>
+                      <div class="d-flex justify-content-between text-center align-items-end mt-1 mt-sm-1">
+                        <p class="sub_text_choose text-black inte_work_heading">Keep your stock accurate with our
+                          Unicommerce integration. Sync inventory levels in real time to avoid overselling and ensure a
+                          smooth customer experience.<br></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 mb-2 choose_outer">
+                <div class="service_box_outer call_cen_servics">
+                  <div class="works-servics-radius">
+                    <div class="serviceIcon">
+                      <div class="inte_img_choose d-flex"><img alt="Icon" loading="lazy" width="1000" height="500"
+                          decoding="async" data-nimg="1"
+                          srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1738133741/base2brand_website/shopify-integration/Group_7_1_mxkajy?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738133741/base2brand_website/shopify-integration/Group_7_1_mxkajy?_a=BAVAZGAO0 2x"
+                          src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738133741/base2brand_website/shopify-integration/Group_7_1_mxkajy"
+                          style="color: transparent; width: 90px; object-fit: contain;"></div>
+                      <h3 class="inte_choose_h3 text-black text-center inte_heading1 pt-3">Order Fulfilment</h3>
+                      <div class="d-flex justify-content-between text-center align-items-end mt-1 mt-sm-1">
+                        <p class="sub_text_choose text-black inte_work_heading">Streamline your order fulfillment
+                          process with Unicommerce integration. Automate tasks like picking, packing, and shipping for
+                          faster delivery and satisfied customers.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 mb-2 choose_outer">
+                <div class="service_box_outer call_cen_servics">
+                  <div class="works-servics-radius">
+                    <div class="serviceIcon">
+                      <div class="inte_img_choose d-flex"><img alt="Icon" loading="lazy" width="1000" height="500"
+                          decoding="async" data-nimg="1"
+                          srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1738133739/base2brand_website/shopify-integration/Group_4_4_ohv8c0?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738133739/base2brand_website/shopify-integration/Group_4_4_ohv8c0?_a=BAVAZGAO0 2x"
+                          src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738133739/base2brand_website/shopify-integration/Group_4_4_ohv8c0"
+                          style="color: transparent; width: 90px; object-fit: contain;"></div>
+                      <h3 class="inte_choose_h3 text-black text-center inte_heading1 pt-3">Product Syncing</h3>
+                      <div class="d-flex justify-content-between text-center align-items-end mt-1 mt-sm-1">
+                        <p class="sub_text_choose text-black inte_work_heading">Manage your product catalog effortlessly
+                          with Unicommerce integration. Sync product data across platforms for consistent and up-to-date
+                          listings.<br></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 mb-2 choose_outer">
+                <div class="service_box_outer call_cen_servics">
+                  <div class="works-servics-radius">
+                    <div class="serviceIcon">
+                      <div class="inte_img_choose d-flex"><img alt="Icon" loading="lazy" width="1000" height="500"
+                          decoding="async" data-nimg="1"
+                          srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1738133737/base2brand_website/shopify-integration/Group_8_2_jrgeve?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738133737/base2brand_website/shopify-integration/Group_8_2_jrgeve?_a=BAVAZGAO0 2x"
+                          src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738133737/base2brand_website/shopify-integration/Group_8_2_jrgeve"
+                          style="color: transparent; width: 90px; object-fit: contain;"></div>
+                      <h3 class="inte_choose_h3 text-black text-center inte_heading1 pt-3">Order Returns Management</h3>
+                      <div class="d-flex justify-content-between text-center align-items-end mt-1 mt-sm-1">
+                        <p class="sub_text_choose text-black inte_work_heading">Simplify returns with our Unicommerce
+                          integration. Automate return requests and manage reverse logistics efficiently for hassle-free
+                          customer service.<br></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 mb-2 choose_outer">
+                <div class="service_box_outer call_cen_servics">
+                  <div class="works-servics-radius">
+                    <div class="serviceIcon">
+                      <div class="inte_img_choose d-flex"><img alt="Icon" loading="lazy" width="1000" height="500"
+                          decoding="async" data-nimg="1"
+                          srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1738133735/base2brand_website/shopify-integration/Group_6_2_wckrau?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738133735/base2brand_website/shopify-integration/Group_6_2_wckrau?_a=BAVAZGAO0 2x"
+                          src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738133735/base2brand_website/shopify-integration/Group_6_2_wckrau"
+                          style="color: transparent; width: 90px; object-fit: contain;"></div>
+                      <h3 class="inte_choose_h3 text-black text-center inte_heading1">Order Delivery Management</h3>
+                      <div class="d-flex justify-content-between text-center align-items-end mt-1 mt-sm-1">
+                        <p class="sub_text_choose text-black inte_work_heading">Optimize delivery operations with
+                          Unicommerce integration. Track shipments, manage carriers, and ensure timely delivery to
+                          delight your customers.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="mt-4 d-flex justify-content-center"><button class="b2b-btn b2b-btn-sm m-0">Book a Free
+                  Demo</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="feature4_inte_com pt-5 pb-4">
+        <h3 class="inte-sub-heading2 pt-2 ani_faq_h3 text-white">Key Benefits of Our Easy Ecom Shopify <br>Integration
+          Service</h3>
+        <div class="container">
+          <div class="row d-flex flex-wrap align-items-center pt-2 pb-4">
+            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex justify-content-center pt-4 pb-4"><img alt="Banner"
+                loading="lazy" width="1000" height="500" decoding="async" data-nimg="1" class="ani_faq_banner"
+                srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1738133973/base2brand_website/shopify-integration/Main_File_wgpalk?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738133973/base2brand_website/shopify-integration/Main_File_wgpalk?_a=BAVAZGAO0 2x"
+                src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738133973/base2brand_website/shopify-integration/Main_File_wgpalk"
+                style="color: transparent;"></div>
+            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 mt-md-5 inte_ani_faqp" id="WEB">
+              <div class="accordion accordion-flush b2b-accordion" id="accordionFlushExample">
+                <div class="inte_faq_com">
+                  <h2 class="accordion-header"><button class="accordion-button collapsed ques_text inte_faq_btn"
+                      type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse20" aria-expanded="false"
+                      aria-controls="flush-collapse20">Simplified Operations with Easy Ecom Integration</button></h2>
+                  <div id="flush-collapse20" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <p class="anifaq_inte_text">Base2Brand ensures streamlined operations by integrating Uni-Commerce
+                        with your Shopify store. Manage orders, inventory, and fulfillment efficiently from a single
+                        platform, reducing complexity while boosting productivity and accuracy.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="inte_faq_com">
+                  <h2 class="accordion-header"><button class="accordion-button collapsed ques_text inte_faq_btn"
+                      type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse21" aria-expanded="false"
+                      aria-controls="flush-collapse21">Improved Inventory Management</button></h2>
+                  <div id="flush-collapse21" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <p class="anifaq_inte_text">Base2Brand ensures streamlined operations by integrating Uni-Commerce
+                        with your Shopify store. Manage orders, inventory, and fulfillment efficiently from a single
+                        platform, reducing complexity while boosting productivity and accuracy.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="inte_faq_com">
+                  <h2 class="accordion-header"><button class="accordion-button collapsed ques_text inte_faq_btn"
+                      type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse22" aria-expanded="false"
+                      aria-controls="flush-collapse22">Custom Solutions for Your Business</button></h2>
+                  <div id="flush-collapse22" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <p class="anifaq_inte_text">Base2Brand ensures streamlined operations by integrating Uni-Commerce
+                        with your Shopify store. Manage orders, inventory, and fulfillment efficiently from a single
+                        platform, reducing complexity while boosting productivity and accuracy.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="inte_faq_com">
+                  <h2 class="accordion-header"><button class="accordion-button collapsed ques_text inte_faq_btn"
+                      type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse23" aria-expanded="false"
+                      aria-controls="flush-collapse23">Seamless Functionality for E-Commerce Success</button></h2>
+                  <div id="flush-collapse23" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <p class="anifaq_inte_text">Base2Brand ensures streamlined operations by integrating Uni-Commerce
+                        with your Shopify store. Manage orders, inventory, and fulfillment efficiently from a single
+                        platform, reducing complexity while boosting productivity and accuracy.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="processcon pt-5 pb-5">
+        <h3 class="inte-sub-heading2 pt-2 ani_process_h3 text-white">Our Proven Process: Step-by-Step <br>Integratio
+        </h3>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 mb-3 ps-4">
+              <div class="service_box_outer_pro call_cen_servics">
+                <div class="works-servics-radius2">
+                  <div class="serviceIcon_1">
+                    <div class="d-flex justify-content-center inte_hover mb-3"><img alt="01" loading="lazy" width="1000"
+                        height="500" decoding="async" data-nimg="1"
+                        srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1738063708/base2brand_website/shopify-integration/Group_2_6_fz1mog?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738063708/base2brand_website/shopify-integration/Group_2_6_fz1mog?_a=BAVAZGAO0 2x"
+                        src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738063708/base2brand_website/shopify-integration/Group_2_6_fz1mog"
+                        style="color: transparent; width: 110px;"></div>
+                    <h3 class="inte_process_h3 text-black inte_heading1">
+                      <p class="step-count_inte"><span>01</span></p>Assessment
+                    </h3>
+                    <div class="d-flex justify-content-center align-items-end mt-1 mt-sm-1">
+                      <p class="sub_text_process text-white text-center inte_work_heading">We analyze your Shopify store
+                        to understand your operational needs<br></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3 ps-4">
+              <div class="service_box_outer_pro call_cen_servics">
+                <div class="works-servics-radius2">
+                  <div class="serviceIcon_2">
+                    <div>
+                      <h3 class="inte_process_h3 text-black inte_heading1">
+                        <p class="step-count_inte"><span>02</span></p>Planning
+                      </h3>
+                      <div class="d-flex justify-content-center align-items-end mt-1 mt-sm-1">
+                        <p class="sub_text_process text-center text-white inte_work_heading">We create a tailored
+                          strategy using advanced Uni-Commerce platform solutions<br></p>
+                      </div>
+                    </div>
+                    <div class="justify-content-center inte_hover serviceIcon_2_img d-flex mt-3"><img alt="01"
+                        loading="lazy" width="1000" height="500" decoding="async" data-nimg="1"
+                        srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1738063710/base2brand_website/shopify-integration/Group_3_2_iashze?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738063710/base2brand_website/shopify-integration/Group_3_2_iashze?_a=BAVAZGAO0 2x"
+                        src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738063710/base2brand_website/shopify-integration/Group_3_2_iashze"
+                        style="color: transparent; width: 110px;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3 ps-4">
+              <div class="service_box_outer_pro call_cen_servics">
+                <div class="works-servics-radius2">
+                  <div class="serviceIcon_1">
+                    <div class="justify-content-center inte_hover d-flex mb-3"><img alt="01" loading="lazy" width="1000"
+                        height="500" decoding="async" data-nimg="1"
+                        srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1738063711/base2brand_website/shopify-integration/Group_4_2_qxrcnz?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738063711/base2brand_website/shopify-integration/Group_4_2_qxrcnz?_a=BAVAZGAO0 2x"
+                        src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738063711/base2brand_website/shopify-integration/Group_4_2_qxrcnz"
+                        style="color: transparent; width: 110px;"></div>
+                    <h3 class="inte_process_h3 text-black inte_heading1">
+                      <p class="step-count_inte"><span>03</span></p>Execution
+                    </h3>
+                    <div class="d-flex justify-content-center align-items-end mt-1 mt-sm-1">
+                      <p class="sub_text_process text-center text-white inte_work_heading">Our team expertly implements
+                        integration for real-time sync<br></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3 ps-4">
+              <div class="service_box_outer_pro call_cen_servics">
+                <div class="works-servics-radius2">
+                  <div class="serviceIcon_2">
+                    <div>
+                      <h3 class="inte_process_h3 text-black inte_heading1 pt-3">
+                        <p class="step-count_inte"><span>04</span></p>Testing
+                      </h3>
+                      <div class="d-flex justify-content-center align-items-end mt-1 mt-sm-1">
+                        <p class="sub_text_process text-center text-white inte_work_heading">Rigorous testing ensures
+                          error-free, seamless functionality<br></p>
+                      </div>
+                    </div>
+                    <div class="justify-content-center inte_hover serviceIcon_2_img d-flex"><img alt="01" loading="lazy"
+                        width="1000" height="500" decoding="async" data-nimg="1"
+                        srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1738063707/base2brand_website/shopify-integration/Group_5_2_cex5gw?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738063707/base2brand_website/shopify-integration/Group_5_2_cex5gw?_a=BAVAZGAO0 2x"
+                        src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738063707/base2brand_website/shopify-integration/Group_5_2_cex5gw"
+                        style="color: transparent; width: 110px;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="custom_bar d-flex flex-column align-items-center pt-4 pb-5">
+          <h3 class="inte-sub-heading pt-2 ani_faq_h3 text-white">Let Base2Brand Simplify Your E-commerce Operations
+          </h3>
+          <p class="sub_text text-center text-white m-0 inte_dis_cus_p">By choosing our Uni-Commerce integration
+            services, you’re partnering with experts committed to delivering tailored solutions for your Shopify store.
+            Our proficiency in Shopify development and Uni-Commerce integration ensures your e-commerce business
+            operates efficiently on a unified platform.</p>
+        </div>
+      </div>
+      <div class="inte_FAQ" style="background: rgb(182, 204, 255);">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="text-center mt-5">
+                <h2 class="text-white b2b-main-heading inte_faqh2 text-center">FAQs on Shopify Integration with <span
+                    class="colorbartitle">Easy E-com</span></h2>
+              </div>
+            </div>
+            <div class="col-xl-8 col-lg-9 col-md-12 m-auto pb-5">
+              <div class="accordion accordion-flush b2b-accordion" id="accordionFlushExample3">
+                <div class="accordion-item inte_faq_con2">
+                  <h2 class="accordion-header fs-4"><button class="accordion-button collapsed intefaq_btn" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#flush-collapse1" aria-expanded="false"
+                      aria-controls="flush-collapse1">What is Easy Ecom Shopify Integration?</button></h2>
+                  <div id="flush-collapse1" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample3">
+                    <div class="accordion-body">
+                      <p class="intefaq_p">Odoo Integration for Shopify connects your Shopify store with Odoo’s ERP and
+                        CRM systems, streamlining inventory management, order processing, and customer relationship
+                        management.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item inte_faq_con2">
+                  <h2 class="accordion-header fs-4"><button class="accordion-button collapsed intefaq_btn" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#flush-collapse2" aria-expanded="false"
+                      aria-controls="flush-collapse2">How does Easy Ecom Custom Integration simplify my
+                      operations?</button></h2>
+                  <div id="flush-collapse2" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample3">
+                    <div class="accordion-body">
+                      <p class="intefaq_p">Shopify integration with Uni-Commerce connects your Shopify store to
+                        Uni-Commerce, enabling seamless management of orders, inventory, and operations from a single
+                        platform.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item inte_faq_con2">
+                  <h2 class="accordion-header fs-4"><button class="accordion-button collapsed intefaq_btn" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#flush-collapse3" aria-expanded="false"
+                      aria-controls="flush-collapse3">Can Easy Ecom handle multi-channel inventory management?</button>
+                  </h2>
+                  <div id="flush-collapse3" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample3">
+                    <div class="accordion-body">
+                      <p class="intefaq_p">Shopify integration with Uni-Commerce connects your Shopify store to
+                        Uni-Commerce, enabling seamless management of orders, inventory, and operations from a single
+                        platform.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item inte_faq_con2">
+                  <h2 class="accordion-header fs-4"><button class="accordion-button collapsed intefaq_btn" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false"
+                      aria-controls="flush-collapse4">Is the Easy Ecom Shopify Integration process secure?</button></h2>
+                  <div id="flush-collapse4" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample3">
+                    <div class="accordion-body">
+                      <p class="intefaq_p">Shopify integration with Uni-Commerce connects your Shopify store to
+                        Uni-Commerce, enabling seamless management of orders, inventory, and operations from a single
+                        platform.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item inte_faq_con2">
+                  <h2 class="accordion-header fs-4"><button class="accordion-button collapsed intefaq_btn" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false"
+                      aria-controls="flush-collapse5">Can I integrate third-party apps with Easy Ecom Shopify
+                      integration?</button></h2>
+                  <div id="flush-collapse5" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample3">
+                    <div class="accordion-body">
+                      <p class="intefaq_p">Shopify integration with Uni-Commerce connects your Shopify store to
+                        Uni-Commerce, enabling seamless management of orders, inventory, and operations from a single
+                        platform.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item inte_faq_con2">
+                  <h2 class="accordion-header fs-4"><button class="accordion-button collapsed intefaq_btn" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false"
+                      aria-controls="flush-collapse6">How long does the Easy Ecom Shopify integration process
+                      take?</button></h2>
+                  <div id="flush-collapse6" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample3">
+                    <div class="accordion-body">
+                      <p class="intefaq_p">Shopify integration with Uni-Commerce connects your Shopify store to
+                        Uni-Commerce, enabling seamless management of orders, inventory, and operations from a single
+                        platform.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item inte_faq_con2">
+                  <h2 class="accordion-header fs-4"><button class="accordion-button collapsed intefaq_btn" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false"
+                      aria-controls="flush-collapse7">What support is provided post-integration?</button></h2>
+                  <div id="flush-collapse7" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample3">
+                    <div class="accordion-body">
+                      <p class="intefaq_p">Shopify integration with Uni-Commerce connects your Shopify store to
+                        Uni-Commerce, enabling seamless management of orders, inventory, and operations from a single
+                        platform.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style="background-image: url(&quot;https://res.cloudinary.com/driveuyen/image/upload/v1738912658/base2brand_website/shopify-integration/radial_bg_orzxvh_1_uj0x84.webp&quot;); background-repeat: no-repeat;">
+        <div class="container pb-5 pt-5">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="text-center">
+                <h2 class="b2b-main-heading text-center mb-4 text-uppercase">Looking for Other Integration?</h2>
+              </div>
+              <p class="text-white text-center b2b-text mb-5">We're not just about mobile app development; we provide a
+                comprehensive suite of IT solutions. From web development to digital marketing, our services encompass
+                everything your business needs to thrive in the digital landscape</p>
+            </div>
+            <div class="col-lg-10">
+              <div class="row footer-menue justify-content-center">
+                <div class="col-lg-4 col-md-6 col-sm-8 mb-3"><a class="menuLink" href="./html/uni-commerce.html">
+                    <div class="menuInner b2b-pink-bg erp-before">
+                      <h3 class="b2b-title-text text-black d-flex align-items-start">Uni-Commerce Integration With
+                        Shopify</h3>
+                      <div class="d-flex align-items-start justify-content-between">
+                        <p class="menuText mb-0">Simplify inventory management with Uni-Commerce integration on Shopify
+                        </p>
+                        <div class="nav_image"><img alt="" loading="lazy" width="1000" height="500" decoding="async"
+                            data-nimg="1" class="integration_cross_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1738592043/base2brand_website/shopify-integration/Group_1707480204_bdtz0u?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738592043/base2brand_website/shopify-integration/Group_1707480204_bdtz0u?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738592043/base2brand_website/shopify-integration/Group_1707480204_bdtz0u"
+                            style="color: transparent; width: 60px; height: auto; object-fit: cover; margin-right: 10px;">
+                        </div>
+                      </div>
+                    </div>
+                  </a></div>
+                <div class="col-lg-4 col-md-6 col-sm-8 mb-3"><a class="menuLink" href="./html/odoo.html">
+                    <div class="menuInner b2b-lightBlue-bg erp-before">
+                      <h3 class="b2b-title-text text-black d-flex align-items-start">Odoo Integration With Shopify</h3>
+                      <div class="d-flex align-items-start justify-content-between">
+                        <p class="menuText mb-0">Optimize inventory and business operations with Odoo and Shopify
+                          integration</p>
+                        <div class="nav_image"><img alt="" loading="lazy" width="1000" height="500" decoding="async"
+                            data-nimg="1" class="integration_cross_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1738592331/base2brand_website/shopify-integration/Group_1707480205_1_zfmg4t?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738592331/base2brand_website/shopify-integration/Group_1707480205_1_zfmg4t?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738592331/base2brand_website/shopify-integration/Group_1707480205_1_zfmg4t"
+                            style="color: transparent; width: 60px; height: auto; object-fit: cover; margin-right: 10px;">
+                        </div>
+                      </div>
+                    </div>
+                  </a></div>
+                <div class="col-lg-4 col-md-6 col-sm-8 mb-3"><a class="menuLink" href="./html/increff.html">
+                    <div class="menuInner b2b-lightBlue-bg erp-before">
+                      <h3 class="b2b-title-text text-black d-flex align-items-start">Increff Integration With Shopify
+                      </h3>
+                      <div class="d-flex align-items-start justify-content-between">
+                        <p class="menuText mb-0">Enhance inventory control with Increff integration for Shopify</p>
+                        <div class="nav_image"><img alt="" loading="lazy" width="1000" height="500" decoding="async"
+                            data-nimg="1" class="integration_cross_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1738592440/base2brand_website/shopify-integration/Group_1707480192_wmpgit?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738592440/base2brand_website/shopify-integration/Group_1707480192_wmpgit?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738592440/base2brand_website/shopify-integration/Group_1707480192_wmpgit"
+                            style="color: transparent; width: 60px; height: auto; object-fit: cover; margin-right: 10px;">
+                        </div>
+                      </div>
+                    </div>
+                  </a></div>
+                <div class="col-lg-4 col-md-6 col-sm-8 mb-3"><a class="menuLink" href="./html/custom-recharge.html">
+                    <div class="menuInner b2b-pink-bg erp-before">
+                      <h3 class="b2b-title-text text-black d-flex align-items-start">Custom Recharge Integration With
+                        Hydrogen</h3>
+                      <div class="d-flex align-items-start justify-content-between">
+                        <p class="menuText mb-0">Create a responsive Shopify site with Hydrogen recharge integration</p>
+                        <div class="nav_image"><img alt="" loading="lazy" width="1000" height="500" decoding="async"
+                            data-nimg="1" class="integration_cross_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1738592328/base2brand_website/shopify-integration/Group_1707480201_r3dn6i?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738592328/base2brand_website/shopify-integration/Group_1707480201_r3dn6i?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738592328/base2brand_website/shopify-integration/Group_1707480201_r3dn6i"
+                            style="color: transparent; width: 60px; height: auto; object-fit: cover; margin-right: 10px;">
+                        </div>
+                      </div>
+                    </div>
+                  </a></div>
+                <div class="col-lg-4 col-md-6 col-sm-8 mb-3"><a class="menuLink" href="./html/orderwise.html">
+                    <div class="menuInner b2b-lightBlue-bg erp-before">
+                      <h3 class="b2b-title-text text-black d-flex align-items-start">OrderWise Integration With Shopify
+                      </h3>
+                      <div class="d-flex align-items-start justify-content-between">
+                        <p class="menuText mb-0">Effortlessly manage inventory and orders with OrderWise integration for
+                          Shopify.</p>
+                        <div class="nav_image"><img alt="" loading="lazy" width="1000" height="500" decoding="async"
+                            data-nimg="1" class="integration_cross_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1738592327/base2brand_website/shopify-integration/Group_1707480206_lf54ys?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738592327/base2brand_website/shopify-integration/Group_1707480206_lf54ys?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1738592327/base2brand_website/shopify-integration/Group_1707480206_lf54ys"
+                            style="color: transparent; width: 60px; height: auto; object-fit: cover; margin-right: 10px;">
+                        </div>
+                      </div>
+                    </div>
+                  </a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div>
+            <div class="p-3 logo-slider z-index-4 b2b-black-bg">
+              <div class="col-md-12 text-center pt-4">
+                <h3 class="b2b-partners-heading">Our Trusted Partners Collaborate Seamlessly To Drive Mutual Success
+                </h3>
+              </div>
+              <div class="b2b-container-lg">
+                <div class="slick-slider w-100 slick-initialized" dir="ltr">
+                  <div class="slick-list">
+                    <div class="slick-track"
+                      style="width: 6084px; opacity: 1; transform: translate3d(-2184px, 0px, 0px);">
+                      <div data-index="-7" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197954/base2brand_website/home/logo5_kyxwdv?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197954/base2brand_website/home/logo5_kyxwdv?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197954/base2brand_website/home/logo5_kyxwdv"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="-6" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197942/base2brand_website/home/logo4_rhb1jf?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197942/base2brand_website/home/logo4_rhb1jf?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197942/base2brand_website/home/logo4_rhb1jf"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="-5" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197941/base2brand_website/home/logo3_sr1vyn?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197941/base2brand_website/home/logo3_sr1vyn?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197941/base2brand_website/home/logo3_sr1vyn"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="-4" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197939/base2brand_website/home/logo1_fityqe?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197939/base2brand_website/home/logo1_fityqe?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197939/base2brand_website/home/logo1_fityqe"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="-3" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197956/base2brand_website/home/logo7_vofbro?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197956/base2brand_website/home/logo7_vofbro?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197956/base2brand_website/home/logo7_vofbro"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="-2" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1741182871/base2brand_website/home/iso-logo_al1xmo?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1741182871/base2brand_website/home/iso-logo_al1xmo?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1741182871/base2brand_website/home/iso-logo_al1xmo"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="-1" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1741182883/base2brand_website/home/blob_bsoxhc?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1741182883/base2brand_website/home/blob_bsoxhc?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1741182883/base2brand_website/home/blob_bsoxhc"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="0" class="slick-slide" tabindex="-1" aria-hidden="true"
+                        style="outline: none; width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197955/base2brand_website/home/logo6_pdrvad?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197955/base2brand_website/home/logo6_pdrvad?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197955/base2brand_website/home/logo6_pdrvad"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="1" class="slick-slide" tabindex="-1" aria-hidden="true"
+                        style="outline: none; width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197941/base2brand_website/home/logo2_nqqdal?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197941/base2brand_website/home/logo2_nqqdal?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197941/base2brand_website/home/logo2_nqqdal"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="2" class="slick-slide" tabindex="-1" aria-hidden="true"
+                        style="outline: none; width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197954/base2brand_website/home/logo5_kyxwdv?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197954/base2brand_website/home/logo5_kyxwdv?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197954/base2brand_website/home/logo5_kyxwdv"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="3" class="slick-slide" tabindex="-1" aria-hidden="true"
+                        style="outline: none; width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197942/base2brand_website/home/logo4_rhb1jf?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197942/base2brand_website/home/logo4_rhb1jf?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197942/base2brand_website/home/logo4_rhb1jf"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="4" class="slick-slide" tabindex="-1" aria-hidden="true"
+                        style="outline: none; width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197941/base2brand_website/home/logo3_sr1vyn?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197941/base2brand_website/home/logo3_sr1vyn?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197941/base2brand_website/home/logo3_sr1vyn"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="5" class="slick-slide" tabindex="-1" aria-hidden="true"
+                        style="outline: none; width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197939/base2brand_website/home/logo1_fityqe?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197939/base2brand_website/home/logo1_fityqe?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197939/base2brand_website/home/logo1_fityqe"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="6" class="slick-slide" tabindex="-1" aria-hidden="true"
+                        style="outline: none; width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197956/base2brand_website/home/logo7_vofbro?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197956/base2brand_website/home/logo7_vofbro?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197956/base2brand_website/home/logo7_vofbro"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="7" class="slick-slide slick-active slick-current" tabindex="-1"
+                        aria-hidden="false" style="outline: none; width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197955/base2brand_website/home/logo6_pdrvad?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197955/base2brand_website/home/logo6_pdrvad?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197955/base2brand_website/home/logo6_pdrvad"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="8" class="slick-slide slick-active" tabindex="-1" aria-hidden="false"
+                        style="outline: none; width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197941/base2brand_website/home/logo2_nqqdal?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197941/base2brand_website/home/logo2_nqqdal?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197941/base2brand_website/home/logo2_nqqdal"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="9" class="slick-slide slick-active" tabindex="-1" aria-hidden="false"
+                        style="outline: none; width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197954/base2brand_website/home/logo5_kyxwdv?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197954/base2brand_website/home/logo5_kyxwdv?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197954/base2brand_website/home/logo5_kyxwdv"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="10" class="slick-slide slick-active" tabindex="-1" aria-hidden="false"
+                        style="outline: none; width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197942/base2brand_website/home/logo4_rhb1jf?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197942/base2brand_website/home/logo4_rhb1jf?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197942/base2brand_website/home/logo4_rhb1jf"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="11" class="slick-slide slick-active" tabindex="-1" aria-hidden="false"
+                        style="outline: none; width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197941/base2brand_website/home/logo3_sr1vyn?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197941/base2brand_website/home/logo3_sr1vyn?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197941/base2brand_website/home/logo3_sr1vyn"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="12" class="slick-slide slick-active" tabindex="-1" aria-hidden="false"
+                        style="outline: none; width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197939/base2brand_website/home/logo1_fityqe?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197939/base2brand_website/home/logo1_fityqe?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197939/base2brand_website/home/logo1_fityqe"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="13" class="slick-slide slick-active" tabindex="-1" aria-hidden="false"
+                        style="outline: none; width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197956/base2brand_website/home/logo7_vofbro?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197956/base2brand_website/home/logo7_vofbro?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197956/base2brand_website/home/logo7_vofbro"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="14" class="slick-slide" tabindex="-1" aria-hidden="true"
+                        style="outline: none; width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1741182871/base2brand_website/home/iso-logo_al1xmo?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1741182871/base2brand_website/home/iso-logo_al1xmo?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1741182871/base2brand_website/home/iso-logo_al1xmo"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="15" class="slick-slide" tabindex="-1" aria-hidden="true"
+                        style="outline: none; width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1741182883/base2brand_website/home/blob_bsoxhc?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1741182883/base2brand_website/home/blob_bsoxhc?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1741182883/base2brand_website/home/blob_bsoxhc"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="16" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197955/base2brand_website/home/logo6_pdrvad?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197955/base2brand_website/home/logo6_pdrvad?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197955/base2brand_website/home/logo6_pdrvad"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="17" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197941/base2brand_website/home/logo2_nqqdal?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197941/base2brand_website/home/logo2_nqqdal?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197941/base2brand_website/home/logo2_nqqdal"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="18" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197954/base2brand_website/home/logo5_kyxwdv?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197954/base2brand_website/home/logo5_kyxwdv?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197954/base2brand_website/home/logo5_kyxwdv"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="19" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197942/base2brand_website/home/logo4_rhb1jf?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197942/base2brand_website/home/logo4_rhb1jf?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197942/base2brand_website/home/logo4_rhb1jf"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="20" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197941/base2brand_website/home/logo3_sr1vyn?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197941/base2brand_website/home/logo3_sr1vyn?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197941/base2brand_website/home/logo3_sr1vyn"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="21" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197939/base2brand_website/home/logo1_fityqe?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197939/base2brand_website/home/logo1_fityqe?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197939/base2brand_website/home/logo1_fityqe"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="22" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197956/base2brand_website/home/logo7_vofbro?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197956/base2brand_website/home/logo7_vofbro?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197956/base2brand_website/home/logo7_vofbro"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="23" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197955/base2brand_website/home/logo6_pdrvad?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197955/base2brand_website/home/logo6_pdrvad?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197955/base2brand_website/home/logo6_pdrvad"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="24" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197941/base2brand_website/home/logo2_nqqdal?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197941/base2brand_website/home/logo2_nqqdal?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197941/base2brand_website/home/logo2_nqqdal"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="25" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197954/base2brand_website/home/logo5_kyxwdv?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197954/base2brand_website/home/logo5_kyxwdv?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197954/base2brand_website/home/logo5_kyxwdv"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="26" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197942/base2brand_website/home/logo4_rhb1jf?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197942/base2brand_website/home/logo4_rhb1jf?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197942/base2brand_website/home/logo4_rhb1jf"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="27" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197941/base2brand_website/home/logo3_sr1vyn?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197941/base2brand_website/home/logo3_sr1vyn?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197941/base2brand_website/home/logo3_sr1vyn"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="28" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197939/base2brand_website/home/logo1_fityqe?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197939/base2brand_website/home/logo1_fityqe?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197939/base2brand_website/home/logo1_fityqe"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="29" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1735197956/base2brand_website/home/logo7_vofbro?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197956/base2brand_website/home/logo7_vofbro?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1735197956/base2brand_website/home/logo7_vofbro"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="30" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1741182871/base2brand_website/home/iso-logo_al1xmo?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1741182871/base2brand_website/home/iso-logo_al1xmo?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1741182871/base2brand_website/home/iso-logo_al1xmo"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                      <div data-index="31" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 156px;">
+                        <div><img alt="" tabindex="-1" fetchpriority="high" width="1000" height="100" decoding="async"
+                            data-nimg="1" class="social_logo"
+                            srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_1080/f_auto/q_auto/v1741182883/base2brand_website/home/blob_bsoxhc?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1741182883/base2brand_website/home/blob_bsoxhc?_a=BAVAZGAO0 2x"
+                            src="/driveuyen/image/upload/c_limit,w_2048/f_auto/q_auto/v1741182883/base2brand_website/home/blob_bsoxhc"
+                            style="color: transparent; width: 100%; display: inline-block;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer class="footer">
+            <div class="p-5 borderbottom b2b-black-bg">
+              <div class="row footer-box">
+                <div class="col footerMenu">
+                  <h6>Digital Marketing</h6>
+                  <ul class="mb-0">
+                    <li><a href="./html/seo-services.html">Search Engine Optimization</a></li>
+                    <li><a href="./html/content-writing-services.html">Content Writing</a></li>
+                    <li><a href="./html/google-ads-services.html">Google Ads (PPC)</a></li>
+                    <li><a href="./html/facebook-ad-agency.html">Facebook Ad Agency</a></li>
+                    <li><a href="./html/youtube-marketing.html">YouTube Marketing</a></li>
+                    <li><a href="./html/conversion-rate-optimization-services.html">Conversion Optimization Agency</a>
+                    </li>
+                    <li><a href="./html/social-media-services.html">Social Media Optimization</a></li>
+                    <li><a href="./html/orm-services.html">Online Reputation Management</a></li>
+                    <li><a href="./html/email-marketing-services.html">Email Marketing Providers</a></li>
+                    <li><a href="./html/ecommerce-marketing.html">E-commerce Marketing</a></li>
+                  </ul>
+                </div>
+                <div class="col footerMenu">
+                  <h6>Web/Mobile Development</h6>
+                  <ul class="mb-0">
+                    <li><a href="./html/web-application.html">Remix Framework</a></li>
+                    <li><a href="./html/web-application.html">Laravel Development</a></li>
+                    <li><a href="./html/web-application.html">MEAN Stack Development</a></li>
+                    <li><a href="./html/web-application.html">ASP.NET Development</a></li>
+                    <li><a href="./html/web-application.html">MERN Stack Development</a></li>
+                    <li><a href="./html/web-application.html">Native IOS and Android</a></li>
+                    <li><a href="./html/web-application.html">Hybrid apps Development</a></li>
+                  </ul>
+                </div>
+                <div class="col footerMenu">
+                  <h6>Graphic Design</h6>
+                  <ul class="mb-0">
+                    <li><a href="./html/graphic.html">Branding &amp; Identity</a></li>
+                    <li><a href="./html/graphic.html">Website &amp; App Design</a></li>
+                    <li><a href="./html/graphic.html">Motion Graphics</a></li>
+                    <li><a href="./html/graphic.html">Social Media Design</a></li>
+                    <li><a href="./html/graphic.html">2D &amp; infographic Design</a></li>
+                  </ul>
+                </div>
+                <div class="col footerMenu">
+                  <h6>Ecommerce Development</h6>
+                  <ul class="mb-0">
+                    <li><a href="./html/shopify.html">Shopify Theme Development</a></li>
+                    <li><a href="./html/e-commerce.html">Woo Commerce Development</a></li>
+                    <li><a href="./html/e-commerce.html">Magento Development</a></li>
+                    <li><a href="./html/e-commerce.html">Big Commerce Development</a></li>
+                    <li><a href="./html/e-commerce.html">Open Cart Development</a></li>
+                    <li><a href="./html/shopify.html">Shopify App Development</a></li>
+                  </ul>
+                </div>
+                <div class="col footerMenu">
+                  <h6>Quick Links</h6>
+                  <ul class="mb-0">
+                    <li><a href="./html/services.html">Services</a></li>
+                    <li><a href="./html/about.html">About Us</a></li>
+                    <li><a href="./html/blog.html">Blogs</a></li>
+                    <li><a href="./html/career.html">Career</a></li>
+                    <li><a href="./html/underconstrution.html">Hire Resources</a></li>
+                    <li><a href="./html/case-study.html">Case Studies</a></li>
+                    <li><a href="./html/customer-support.html">Customer Support</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="main_footer p-5 b2b-black-bg">
+              <div class="row d-flex flex-wrap align-items-start row-gap-5">
+                <div class="mb-sm-0 mb-4 footerMenu">
+                  <h2 class="text-white"><b>Follow Us</b></h2>
+                  <div class="social d-flex gap-3 mt-4"><a href="./html/TechBase2Brand.html" target="_blank"><img
+                        alt="Facebook" loading="lazy" width="100" height="100" decoding="async" data-nimg="1"
+                        class="SocialIcon"
+                        srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_128/f_auto/q_auto/v1735799674/base2brand_website/home/Facebook_txvy7z?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_256/f_auto/q_auto/v1735799674/base2brand_website/home/Facebook_txvy7z?_a=BAVAZGAO0 2x"
+                        src="/driveuyen/image/upload/c_limit,w_256/f_auto/q_auto/v1735799674/base2brand_website/home/Facebook_txvy7z"
+                        style="color: transparent;"> </a><a href="./html/techbase2brand.html" target="_blank"><img
+                        alt="Instagram" loading="lazy" width="100" height="100" decoding="async" data-nimg="1"
+                        class="SocialIcon"
+                        srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_128/f_auto/q_auto/v1735799983/base2brand_website/home/Instagram_jeh29v?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_256/f_auto/q_auto/v1735799983/base2brand_website/home/Instagram_jeh29v?_a=BAVAZGAO0 2x"
+                        src="/driveuyen/image/upload/c_limit,w_256/f_auto/q_auto/v1735799983/base2brand_website/home/Instagram_jeh29v"
+                        style="color: transparent;"> </a><a href="./html/techBase2Brand.html" target="_blank"><img
+                        alt="Twitter" loading="lazy" width="100" height="100" decoding="async" data-nimg="1"
+                        class="SocialIcon"
+                        srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_128/f_auto/q_auto/v1735799784/base2brand_website/home/Twitter_bncouo?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_256/f_auto/q_auto/v1735799784/base2brand_website/home/Twitter_bncouo?_a=BAVAZGAO0 2x"
+                        src="/driveuyen/image/upload/c_limit,w_256/f_auto/q_auto/v1735799784/base2brand_website/home/Twitter_bncouo"
+                        style="color: transparent;"> </a><a href="./html/techbase2brand.html" target="_blank"><img
+                        alt="Linkedin" loading="lazy" width="100" height="100" decoding="async" data-nimg="1"
+                        class="SocialIcon"
+                        srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_128/f_auto/q_auto/v1735800012/base2brand_website/home/Linkedin_aiulnb?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_256/f_auto/q_auto/v1735800012/base2brand_website/home/Linkedin_aiulnb?_a=BAVAZGAO0 2x"
+                        src="/driveuyen/image/upload/c_limit,w_256/f_auto/q_auto/v1735800012/base2brand_website/home/Linkedin_aiulnb"
+                        style="color: transparent;"> </a><a href="./html/UCEHsjR1TFlEfsbcYQPlLW4Q.html"
+                      target="_blank"><img alt="Youtube" loading="lazy" width="100" height="100" decoding="async"
+                        data-nimg="1" class="SocialIcon"
+                        srcset="https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_128/f_auto/q_auto/v1735800024/base2brand_website/home/youtube_rueqgv?_a=BAVAZGAO0 1x, https://res.cloudinary.com/driveuyen/image/upload/c_limit,w_256/f_auto/q_auto/v1735800024/base2brand_website/home/youtube_rueqgv?_a=BAVAZGAO0 2x"
+                        src="/driveuyen/image/upload/c_limit,w_256/f_auto/q_auto/v1735800024/base2brand_website/home/youtube_rueqgv"
+                        style="color: transparent;"> </a></div>
+                </div>
+                <div class="mb-sm-0 mb-4 footerMenu">
+                  <h6>Working Hours:</h6>
+                  <ul class="mb-0">
+                    <li>Mon-Fri: 10 Am- 07 Pm</li>
+                    <li>Sat-Sun: Holiday</li>
+                  </ul>
+                </div>
+                <div class="mb-sm-0 mb-4 footerMenu">
+                  <h6>India (headquarter) </h6>
+                  <ul class="mb-0">
+                    <li>F-209, Sector 74, Mohali, 160074 <br>IND <a class="text-white"
+                        href="./html/tel:+91-9872487850.html">+91 9872487850</a></li>
+                  </ul>
+                </div>
+                <div class="mb-sm-0 mb-4 footerMenu">
+                  <h6>USA</h6>
+                  <ul class="mb-0">
+                    <li>7311 Gladys Ave El Cerrito CA 94530, <br>USA, <a class="text-white"
+                        href="./html/tel:+1-720-903-5933.html">+1 720 9035933</a></li>
+                  </ul>
+                </div>
+                <div class="mb-sm-0 mb-4 footerMenu">
+                  <h6>UK</h6>
+                  <ul class="mb-0">
+                    <li>7 Snow Avenue, Blaby, LE8 4BR<br>UK<a class="text-white" href="./html/tel:+44-2080-953232.html">
+                        +44 2080953232</a><br>UK<a class="text-white" href="./html/tel:+44-7552-535341.html"> +44
+                        7448435973</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="text-center p-3">
+              <p class="m-0 text-white">© 2025 All rights reserved | <a class="text-white" href="/"> Base2brand</a> | <a
+                  class="text-white" href="./html/disclaimer.html"> Disclaimer</a> |<a class="text-white"
+                  href="./html/privacy-policy.html"> Privacy Policy</a> | <a class="text-white"
+                  href="./html/terms-of-service.html">Terms of Service</a></p>
+            </div>
+          </footer>
+        </div>
+      </div>
+      <div class="whatsapp_home_logo position-fixed z-3" style="width: 60px;"><a href="./html/9041700209.html"
+          target="_blank">
+          <div class="lf-player-container">
+            <div id="lottie" class="animated-imgs animated-banner-img whatsapp_json"
+              style="background: transparent; margin: 0px auto; outline: none; overflow: hidden; height: max-content;">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100"
+                width="100" height="100" preserveAspectRatio="xMidYMid meet"
+                style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
+                <defs>
+                  <clippath id="__lottie_element_283">
+                    <rect width="100" height="100" x="0" y="0" />
+                  </clippath>
+                  <clippath id="__lottie_element_285">
+                    <path d="M0,0 L100,0 L100,100 L0,100z" />
+                  </clippath>
+                  <clippath id="__lottie_element_289">
+                    <path d="M0,0 L100,0 L100,100 L0,100z" />
+                  </clippath>
+                  <clippath id="__lottie_element_293">
+                    <path d="M0,0 L100,0 L100,100 L0,100z" />
+                  </clippath>
+                  <clippath id="__lottie_element_297">
+                    <path d="M0,0 L100,0 L100,100 L0,100z" />
+                  </clippath>
+                  <clippath id="__lottie_element_301">
+                    <path d="M0,0 L100,0 L100,100 L0,100z" />
+                  </clippath>
+                </defs>
+                <g clip-path="url(#__lottie_element_283)">
+                  <g clip-path="url(#__lottie_element_285)" transform="matrix(1,0,0,1,0,0)" opacity="1"
+                    style="display: block;">
+                    <g transform="matrix(1,0,0,1,49.994998931884766,49.994998931884766)" opacity="1"
+                      style="display: block;">
+                      <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                        <path fill="rgb(75,211,96)" fill-opacity="1"
+                          d=" M0.004999999888241291,0.009999999776482582 C0.00774999987334013,0.009999999776482582 0.009999999776482582,0.00774999987334013 0.009999999776482582,0.004999999888241291 C0.009999999776482582,0.0022499999031424522 0.00774999987334013,0 0.004999999888241291,0 C0.0022499999031424522,0 0,0.0022499999031424522 0,0.004999999888241291 C0,0.00774999987334013 0.0022499999031424522,0.009999999776482582 0.004999999888241291,0.009999999776482582z" />
+                      </g>
+                    </g>
+                  </g>
+                  <g clip-path="url(#__lottie_element_289)" transform="matrix(1,0,0,1,0,0)" opacity="1"
+                    style="display: block;">
+                    <g transform="matrix(1,0,0,1,49.994998931884766,49.994998931884766)" opacity="1"
+                      style="display: block;">
+                      <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                        <path fill="rgb(75,211,96)" fill-opacity="1"
+                          d=" M0.004999999888241291,0.009999999776482582 C0.00774999987334013,0.009999999776482582 0.009999999776482582,0.00774999987334013 0.009999999776482582,0.004999999888241291 C0.009999999776482582,0.0022499999031424522 0.00774999987334013,0 0.004999999888241291,0 C0.0022499999031424522,0 0,0.0022499999031424522 0,0.004999999888241291 C0,0.00774999987334013 0.0022499999031424522,0.009999999776482582 0.004999999888241291,0.009999999776482582z" />
+                      </g>
+                    </g>
+                  </g>
+                  <g clip-path="url(#__lottie_element_293)" transform="matrix(1,0,0,1,0,0)" opacity="1"
+                    style="display: block;">
+                    <g transform="matrix(1,0,0,1,49.994998931884766,49.994998931884766)" opacity="1"
+                      style="display: block;">
+                      <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                        <path fill="rgb(75,211,96)" fill-opacity="1"
+                          d=" M0.004999999888241291,0.009999999776482582 C0.00774999987334013,0.009999999776482582 0.009999999776482582,0.00774999987334013 0.009999999776482582,0.004999999888241291 C0.009999999776482582,0.0022499999031424522 0.00774999987334013,0 0.004999999888241291,0 C0.0022499999031424522,0 0,0.0022499999031424522 0,0.004999999888241291 C0,0.00774999987334013 0.0022499999031424522,0.009999999776482582 0.004999999888241291,0.009999999776482582z" />
+                      </g>
+                    </g>
+                  </g>
+                  <g clip-path="url(#__lottie_element_297)" transform="matrix(1,0,0,1,0,0)" opacity="1"
+                    style="display: block;">
+                    <g transform="matrix(1,0,0,1,20,20)" opacity="1" style="display: block;">
+                      <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                        <path fill="rgb(0,0,0)" fill-opacity="0"
+                          d=" M30,0 C46.56855392456055,0 60,13.431446075439453 60,30 C60,46.56855392456055 47.45964431762695,60 30.891088485717773,60 C24.768238067626953,60 19.0039005279541,58.99057388305664 14.257425308227539,55.841583251953125 C14.257425308227539,55.841583251953125 1.188118815422058,58.81188201904297 1.188118815422058,58.81188201904297 C1.188118815422058,58.81188201904297 4.752475261688232,46.33663558959961 4.752475261688232,46.33663558959961 C1.3666337728500366,41.47895050048828 0,36.370216369628906 0,30 C0,13.431446075439453 13.431446075439453,0 30,0z" />
+                      </g>
+                    </g>
+                    <g transform="matrix(1,0,0,1,20,20)" opacity="1" style="display: block;">
+                      <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                        <path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10"
+                          stroke="rgb(75,211,96)" stroke-opacity="1" stroke-width="6"
+                          d=" M7.10699987411499,57.46699905395508 C4.057000160217285,58.15999984741211 1.187999963760376,58.8120002746582 1.187999963760376,58.8120002746582 C1.187999963760376,58.8120002746582 1.7990000247955322,56.67300033569336 2.5160000324249268,54.16600036621094" />
+                      </g>
+                    </g>
+                    <g transform="matrix(1,0,0,1,0,0)" opacity="1" style="display: block;">
+                      <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                        <path fill="rgb(0,0,0)" fill-opacity="0"
+                          d=" M100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0 C0,0 100,0 100,0z" />
+                      </g>
+                    </g>
+                  </g>
+                  <g clip-path="url(#__lottie_element_301)" transform="matrix(1,0,0,1,0,0)" opacity="0"
+                    style="display: block;">
+                    <g transform="matrix(1,0,0,1,31.528650283813477,34.70000076293945)" opacity="1"
+                      style="display: block;">
+                      <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                        <path fill="rgb(255,255,255)" fill-opacity="1"
+                          d=" M0,6.9591169357299805 C0,9.576022148132324 0.09878318756818771,10.548267364501953 1.3171101808547974,12.984392166137695 C2.2829909324645996,14.915655136108398 2.5178756713867188,14.99502182006836 3.569368362426758,16.599998474121094 C3.569368362426758,16.599998474121094 4.794281005859375,18.308591842651367 4.794281005859375,18.308591842651367 C7.09263801574707,21.106277465820312 6.396764755249023,20.352291107177734 8.962934494018555,22.940536499023438 C12.286442756652832,26.28938102722168 15.664830207824707,27.876720428466797 20.02665901184082,29.461854934692383 C23.681640625,30.786842346191406 26.967830657958984,31.366662979125977 30.313289642333984,28.877626419067383 C31.898212432861328,27.698144912719727 32.71043014526367,26.551733016967773 32.914581298828125,24.433076858520508 C32.973854064941406,23.80916404724121 33.03312301635742,23.4211483001709 32.97824478149414,23.068405151367188 C32.81140899658203,22.003564834594727 31.320878982543945,21.739009857177734 29.799617767333984,20.96959114074707 C28.05005645751953,20.08332633972168 25.053630828857422,18.152063369750977 24.052627563476562,19.212493896484375 C24.052627563476562,19.212493896484375 21.473285675048828,22.497404098510742 21.473285675048828,22.497404098510742 C21.02985954284668,23.037540435791016 20.566675186157227,23.235958099365234 19.815921783447266,22.927309036254883 C16.70973777770996,21.642004013061523 13.434523582458496,19.589487075805664 11.31178092956543,17.056358337402344 C10.528100967407227,16.121591567993164 9.931011199951172,15.297057151794434 9.248308181762695,14.278514862060547 C8.317550659179688,12.882978439331055 7.937784194946289,12.55228328704834 9.254894256591797,11.258160591125488 C9.878326416015625,10.645271301269531 11.120800018310547,9.17257308959961 11.120800018310547,8.134188652038574 C11.120800018310547,7.638145446777344 10.852988243103027,7.322882175445557 10.686153411865234,6.956912040710449 C10.51492977142334,6.5843281745910645 10.391999244689941,6.211744785308838 10.225165367126465,5.801681995391846 C10.225165367126465,5.801681995391846 8.758782386779785,2.2786705493927 8.758782386779785,2.2786705493927 C7.711679935455322,-0.3338252007961273 7.656800270080566,0.17103686928749084 6.008217811584473,0.04316803067922592 C4.021576404571533,-0.11336137354373932 3.314727306365967,0.06521441042423248 1.775903582572937,2.1287553310394287 C0.9395387172698975,3.2531206607818604 0,5.038877010345459 0,6.9591169357299805" />
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg></div>
+          </div>
+        </a></div>
+    </div>
+    <div class="main_call_back_outer">
+      <div class="call_back_cus_outer">
+        <div class="call_back_inner b2b-btn">
+          <div class="cback_svg"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+              <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path fill="#fff" fill-opacity="0" stroke-dasharray="64" stroke-dashoffset="64"
+                  d="M8 3c0.5 0 2.5 4.5 2.5 5c0 1 -1.5 2 -2 3c-0.5 1 0.5 2 1.5 3c0.39 0.39 2 2 3 1.5c1 -0.5 2 -2 3 -2c0.5 0 5 2 5 2.5c0 2 -1.5 3.5 -3 4c-1.5 0.5 -2.5 0.5 -4.5 0c-2 -0.5 -3.5 -1 -6 -3.5c-2.5 -2.5 -3 -4 -3.5 -6c-0.5 -2 -0.5 -3 0 -4.5c0.5 -1.5 2 -3 4 -3Z">
+                  <animate fill="freeze" attributeName="fill-opacity" begin="0.84s" dur="0.21s" values="0;0" />
+                  <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.84s" values="64;0" />
+                  <animatetransform id="lineMdPhoneCallTwotoneLoop0" fill="freeze" attributeName="transform"
+                    begin="0.84s;lineMdPhoneCallTwotoneLoop0.begin+3.78s" dur="0.7s" type="rotate"
+                    values="0 12 12;15 12 12;0 12 12;-12 12 12;0 12 12;12 12 12;0 12 12;-15 12 12;0 12 12" />
+                </path>
+                <path stroke-dasharray="4" stroke-dashoffset="4"
+                  d="M15.76 8.28c-0.5 -0.51 -1.1 -0.93 -1.76 -1.24M15.76 8.28c0.49 0.49 0.9 1.08 1.2 1.72">
+                  <animate fill="freeze" attributeName="stroke-dashoffset" begin="lineMdPhoneCallTwotoneLoop0.begin+0s"
+                    dur="3.78s" keyTimes="0;0.111;0.259;0.37;1" values="4;0;0;4;4" />
+                </path>
+                <path stroke-dasharray="6" stroke-dashoffset="6"
+                  d="M18.67 5.35c-1 -1 -2.26 -1.73 -3.67 -2.1M18.67 5.35c0.99 1 1.72 2.25 2.08 3.65">
+                  <animate fill="freeze" attributeName="stroke-dashoffset"
+                    begin="lineMdPhoneCallTwotoneLoop0.begin+0.28s" dur="3.78s" keyTimes="0;0.074;0.185;0.333;0.444;1"
+                    values="6;6;0;0;6;6" />
+                </path>
+              </g>
+            </svg></div>
+          <div class="cback_text">
+            <p class="m-0 text-white">Get a Call Back</p>
+          </div>
+        </div>
+      </div>
+      <div class="call_back_popup">
+        <div class="position-relative">
+          <div class="call_back_cross"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 15 15">
+              <path fill="#fff"
+                d="M3.64 2.27L7.5 6.13l3.84-3.84A.92.92 0 0 1 12 2a1 1 0 0 1 1 1a.9.9 0 0 1-.27.66L8.84 7.5l3.89 3.89A.9.9 0 0 1 13 12a1 1 0 0 1-1 1a.92.92 0 0 1-.69-.27L7.5 8.87l-3.85 3.85A.92.92 0 0 1 3 13a1 1 0 0 1-1-1a.9.9 0 0 1 .27-.66L6.16 7.5L2.27 3.61A.9.9 0 0 1 2 3a1 1 0 0 1 1-1c.24.003.47.1.64.27" />
+            </svg></div>
+          <div>
+            <div>
+              <div class="container pt-md-2 pt-3 pb-2 b2b-overflow-hidden">
+                <div class="text-start">
+                  <h3 class="call_back_heading text-white">Let's Discuss With <br>Base<span
+                      style="color: rgb(243, 115, 53);">2</span>brand</h3>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 text-white">
+                    <form>
+                      <div class="row">
+                        <div class="col-lg-12 mb-3"><input class="call_back_form" placeholder="Name"
+                            aria-describedby="emailHelp" required type="text" value="" name="name"></div>
+                        <div class="col-lg-12 mb-3"><input class="call_back_form" placeholder="Email" required
+                            type="email" value="" name="email"></div>
+                        <div class="col-lg-12 mb-3"><input class="call_back_form" placeholder="Phone" required
+                            type="number" value="" name="mobileNo"></div>
+                        <div class="col-lg-12 mb-3"><textarea class="call_back_form call_back_textarea" name="comment"
+                            placeholder="Your comment" maxlength="200" required></textarea></div>
+                        <div class="d-flex justify-content-end m-0"><button type="submit"
+                            class="b2b-btn b2b-btn-sm">Let's Call !</button></div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="Toastify"></div><noscript> <img height="1" width="1" style="display:none" src="/tr"></noscript>
+  <script src="./scripts/popper.min.js" async="true"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"
+    data-nscript="afterInteractive"></script>
+  <script src="./scripts/bootstrap.min.js" async="true"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"
+    data-nscript="afterInteractive"></script>
+  <script src="/gtag/js" async="true" data-nscript="afterInteractive"></script>
+  <script data-nscript="afterInteractive">window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-82ZFJ2HBGY');</script>
+  <script type="text/javascript" data-nscript="afterInteractive">(function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "qgutziiy6g");</script>
+  <script data-nscript="afterInteractive">(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WF8GV7S');</script>
+  <script type="application/ld+json" data-nscript="afterInteractive">
+
+"@context": "http://schema.org",
+"@type": "Organization",
+"name": "Base2Brand Infotech Pvt Ltd",
+"url": "https://www.base2brand.com",
+"logo": "https://www.base2brand.com/logo.png",
+"sameAs": [
+"https://www.facebook.com/Base2Brand",
+"https://www.linkedin.com/company/base2brand",
+"https://www.instagram.com/base2brand"
+],
+"contactPoint": {
+"@type": "ContactPoint",
+"telephone": "+91 9872487850",
+"contactType": "Customer Service",
+"areaServed": "IN",
+"availableLanguage": "English"
+},
+"address": {
+"@type": "PostalAddress",
+"streetAddress": "F-209, Sector 74",
+"addressLocality": "Mohali",
+"addressRegion": "Chandigarh",
+"postalCode": "160074",
+"addressCountry": "IN"
+},
+"description": "Base2Brand Infotech Pvt Ltd is a certified Shopify Partner offering expert services in eCommerce development, design, and customizations.",
+         "sameAs": "https://www.shopify.com/partners/directory/partner/base2brand4"</script>
+  <script data-nscript="afterInteractive">!function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1057584673056804');
+    fbq('track', 'PageView');</script><next-route-announcer style="position: absolute;"></next-route-announcer>
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+
+</html>
